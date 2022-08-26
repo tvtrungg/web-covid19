@@ -1,0 +1,791 @@
+[{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5db5"
+  },
+  "id": "0",
+  "type": "food",
+  "name": "Thịt bò mỹ",
+  "image": "thitbo.png",
+  "image1": "thitbo1.png",
+  "image2": "thitbo2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "30000",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1661066815560"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5db6"
+  },
+  "id": "1",
+  "type": "food",
+  "name": "Gà chiên",
+  "image": "gachien.png",
+  "image1": "gachien1.png",
+  "image2": "gachien2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "30000",
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1661068309450"
+    }
+  }
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5db7"
+  },
+  "id": "2",
+  "type": "food",
+  "name": "Aji-ngon",
+  "image": "botngot.png",
+  "image1": "botngot1.png",
+  "image2": "botngot2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "25000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5db8"
+  },
+  "id": "3",
+  "type": "food",
+  "name": "Ba chỉ cuộn",
+  "image": "bachi.png",
+  "image1": "bachi1.png",
+  "image2": "bachi2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "55000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5db9"
+  },
+  "id": "4",
+  "type": "food",
+  "name": "Ba rọi",
+  "image": "baroi.png",
+  "image1": "baroi1.png",
+  "image2": "baroi2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "55000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dba"
+  },
+  "id": "5",
+  "type": "food",
+  "name": "Bí đao",
+  "image": "bidao.png",
+  "image1": "bidao1.png",
+  "image2": "bidao2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "15000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dbb"
+  },
+  "id": "6",
+  "type": "food",
+  "name": "Bưởi",
+  "image": "buoi.png",
+  "image1": "buoi1.png",
+  "image2": "buoi2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "25000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dbc"
+  },
+  "id": "7",
+  "type": "food",
+  "name": "Cá cam nhật",
+  "image": "cacamnhat.png",
+  "image1": "cacamnhat1.png",
+  "image2": "cacamnhat2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "35000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dbd"
+  },
+  "id": "8",
+  "type": "food",
+  "name": "Cải thảo",
+  "image": "caithao.png",
+  "image1": "caithao1.png",
+  "image2": "caithao2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "20000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dbe"
+  },
+  "id": "9",
+  "type": "food",
+  "name": "Cải thìa",
+  "image": "caithia.png",
+  "image1": "caithia1.png",
+  "image2": "caithia2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "20000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dbf"
+  },
+  "id": "10",
+  "type": "food",
+  "name": "Cá hộp Sardines",
+  "image": "camoi.png",
+  "image1": "camoi1.png",
+  "image2": "camoi2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "25000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dc0"
+  },
+  "id": "11",
+  "type": "food",
+  "name": "Nước tương Chinsu",
+  "image": "chinsu.png",
+  "image1": "chinsu1.png",
+  "image2": "chinsu2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "15000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dc1"
+  },
+  "id": "12",
+  "type": "food",
+  "name": "Dầu ăn Gold",
+  "image": "dauangold.png",
+  "image1": "dauangold1.png",
+  "image2": "dauangold2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "55000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dc2"
+  },
+  "id": "13",
+  "type": "food",
+  "name": "Dưa chuột",
+  "image": "duachuot.png",
+  "image1": "duachuot1.png",
+  "image2": "duachuot2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "15000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dc3"
+  },
+  "id": "14",
+  "type": "food",
+  "name": "Dưa hấu",
+  "image": "duahau.png",
+  "image1": "duahau1.png",
+  "image2": "duahau2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "25000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dc4"
+  },
+  "id": "15",
+  "type": "food",
+  "name": "Gạo ngọc sen",
+  "image": "gao.png",
+  "image1": "gao1.png",
+  "image2": "gao2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "15000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dc5"
+  },
+  "id": "16",
+  "type": "food",
+  "name": "Giá đỗ",
+  "image": "giado.png",
+  "image1": "giado1.png",
+  "image2": "giado2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "5000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dc6"
+  },
+  "id": "17",
+  "type": "food",
+  "name": "Trứng gà",
+  "image": "hoptrungga.png",
+  "image1": "hoptrungga1.png",
+  "image2": "hoptrungga2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "20000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dc7"
+  },
+  "id": "18",
+  "type": "food",
+  "name": "Trứng vịt",
+  "image": "hoptrungvit.png",
+  "image1": "hoptrungvit1.png",
+  "image2": "hoptrungvit2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "22000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dc8"
+  },
+  "id": "19",
+  "type": "food",
+  "name": "Mì luckyme",
+  "image": "luckyme.png",
+  "image1": "luckyme1.png",
+  "image2": "luckyme2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "35000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dc9"
+  },
+  "id": "20",
+  "type": "food",
+  "name": "Mì cay",
+  "image": "micay.png",
+  "image1": "micay1.png",
+  "image2": "micay2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "15000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dca"
+  },
+  "id": "21",
+  "type": "food",
+  "name": "Nước mắm",
+  "image": "nuocmam.png",
+  "image1": "nuocmam1.png",
+  "image2": "nuocmam2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "25000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dcb"
+  },
+  "id": "22",
+  "type": "food",
+  "name": "Rau dền",
+  "image": "rauden.png",
+  "image1": "rauden1.png",
+  "image2": "rauden2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "12000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dcc"
+  },
+  "id": "23",
+  "type": "food",
+  "name": "Rau mùi",
+  "image": "raumui.png",
+  "image1": "raumui1.png",
+  "image2": "raumui2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "10000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dcd"
+  },
+  "id": "24",
+  "type": "food",
+  "name": "Mì tôm cay",
+  "image": "tomphunlua.png",
+  "image1": "tomphunlua1.png",
+  "image2": "tomphunlua2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "5000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dce"
+  },
+  "id": "25",
+  "type": "food",
+  "name": "TH truemilk",
+  "image": "thbich.png",
+  "image1": "thhop.png",
+  "image2": "ththung.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "10000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dcf"
+  },
+  "id": "26",
+  "type": "food",
+  "name": "Heo phi lê",
+  "image": "thitheo.png",
+  "image1": "thitheo1.png",
+  "image2": "thitheo2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "30000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dd0"
+  },
+  "id": "27",
+  "type": "food",
+  "name": "Mì Doraemon",
+  "image": "thungmidoraemon.png",
+  "image1": "thungmidoraemon1.png",
+  "image2": "thungmidoraemon2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "13000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dd1"
+  },
+  "id": "28",
+  "type": "food",
+  "name": "Trái nhãn",
+  "image": "trainhan.png",
+  "image1": "trainhan1.png",
+  "image2": "trainhan2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "20000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dd2"
+  },
+  "id": "29",
+  "type": "food",
+  "name": "Gà ướp",
+  "image": "gauop.png",
+  "image1": "gauop1.png",
+  "image2": "gauop2.png",
+  "upto": "1",
+  "amount": "30",
+  "price": "35000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dd3"
+  },
+  "id": "30",
+  "type": "food",
+  "name": "Xúc xích",
+  "image": "xucxich.png",
+  "image1": "xucxich1.png",
+  "image2": "xucxich2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "12000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dd4"
+  },
+  "id": "31",
+  "type": "drinks",
+  "name": "Bia Heniken",
+  "image": "heniken.png",
+  "image1": "heniken1.png",
+  "image2": "heniken2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "18000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dd5"
+  },
+  "id": "32",
+  "type": "drinks",
+  "name": "Sting",
+  "image": "sting.png",
+  "image1": "sting1.png",
+  "image2": "sting2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "10000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dd6"
+  },
+  "id": "33",
+  "type": "drinks",
+  "name": "Milk Tea",
+  "image": "milktea.png",
+  "image1": "milktea1.png",
+  "image2": "milktea2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "12000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dd7"
+  },
+  "id": "34",
+  "type": "drinks",
+  "name": "Red Bull",
+  "image": "redbull.png",
+  "image1": "redbull1.png",
+  "image2": "redbull2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "10000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dd8"
+  },
+  "id": "35",
+  "type": "drinks",
+  "name": "Pepsi",
+  "image": "pepsi.png",
+  "image1": "pepsi1.png",
+  "image2": "pepsi2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "10000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dd9"
+  },
+  "id": "36",
+  "type": "food",
+  "name": "Bento",
+  "image": "bento.png",
+  "image1": "bento1.png",
+  "image2": "bento2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "12000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dda"
+  },
+  "id": "37",
+  "type": "food",
+  "name": "Bí đỏ",
+  "image": "bido.png",
+  "image1": "bido1.png",
+  "image2": "bido2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "12000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5ddb"
+  },
+  "id": "38",
+  "type": "food",
+  "name": "Cà chua",
+  "image": "cachua.png",
+  "image1": "cachua1.png",
+  "image2": "cachua2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "12000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5ddc"
+  },
+  "id": "39",
+  "type": "food",
+  "name": "Cà rốt",
+  "image": "carot.png",
+  "image1": "carot1.png",
+  "image2": "carot2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "12000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5ddd"
+  },
+  "id": "40",
+  "type": "food",
+  "name": "Đập bắp",
+  "image": "daubap.png",
+  "image1": "daubap1.png",
+  "image2": "daubap2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "12000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dde"
+  },
+  "id": "41",
+  "type": "food",
+  "name": "Đùi gà rán",
+  "image": "duigaran.png",
+  "image1": "duigaran1.png",
+  "image2": "duigaran2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "30000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5ddf"
+  },
+  "id": "42",
+  "type": "food",
+  "name": "Bánh bao trứng muối",
+  "image": "banhbaotrungmui.png",
+  "image1": "banhbaotrungmui1.png",
+  "image2": "banhbaotrungmui2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "12000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5de0"
+  },
+  "id": "43",
+  "type": "food",
+  "name": "Snack khoai tây",
+  "image": "khoaitay.png",
+  "image1": "khoaitay1.png",
+  "image2": "khoaitay2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "12000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5de1"
+  },
+  "id": "44",
+  "type": "food",
+  "name": "Khổ qua",
+  "image": "khoqua.png",
+  "image1": "khoqua1.png",
+  "image2": "khoqua2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "12000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5de2"
+  },
+  "id": "45",
+  "type": "food",
+  "name": "Sườn non",
+  "image": "suonnon.png",
+  "image1": "suonnon1.png",
+  "image2": "suonnon2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "75000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5de3"
+  },
+  "id": "46",
+  "type": "food",
+  "name": "Tokpokki",
+  "image": "tokpokki.png",
+  "image1": "tokpokki1.png",
+  "image2": "tokpokki2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "40000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5de4"
+  },
+  "id": "47",
+  "type": "drinks",
+  "name": "Trà Chanh C2",
+  "image": "c2.png",
+  "image1": "c21.png",
+  "image2": "c22.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "10000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5de5"
+  },
+  "id": "48",
+  "type": "essentials",
+  "name": "Listerine",
+  "image": "sucmieng.png",
+  "image1": "sucmieng1.png",
+  "image2": "sucmieng2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "50000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5de6"
+  },
+  "id": "49",
+  "type": "essentials",
+  "name": "Kem P/S",
+  "image": "ps.png",
+  "image1": "ps1.png",
+  "image2": "ps2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "25000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5de7"
+  },
+  "id": "50",
+  "type": "essentials",
+  "name": "Rửa tay LifeBuoy",
+  "image": "ruataylifebuoy.png",
+  "image1": "ruataylifebuoy1.png",
+  "image2": "ruataylifebuoy2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "45000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5de8"
+  },
+  "id": "51",
+  "type": "essentials",
+  "name": "Green Cross",
+  "image": "greencross.png",
+  "image1": "greencross1.png",
+  "image2": "greencross2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "35000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5de9"
+  },
+  "id": "52",
+  "type": "drinks",
+  "name": "Coca Cola",
+  "image": "cocacola.png",
+  "image1": "cocacola1.png",
+  "image2": "cocacola2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "12000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dea"
+  },
+  "id": "53",
+  "type": "drinks",
+  "name": "Strongbow Dâu",
+  "image": "strongbow.png",
+  "image1": "strongbow1.png",
+  "image2": "strongbow2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "18000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5deb"
+  },
+  "id": "54",
+  "type": "drinks",
+  "name": "Olong",
+  "image": "olong.png",
+  "image1": "olong1.png",
+  "image2": "olong2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "10000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dec"
+  },
+  "id": "55",
+  "type": "drinks",
+  "name": "Bia tiger",
+  "image": "tiger.png",
+  "image1": "tiger1.png",
+  "image2": "tiger2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "17000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5ded"
+  },
+  "id": "56",
+  "type": "essentials",
+  "name": "Khẩu trang xanh",
+  "image": "khautrang.png",
+  "image1": "khautrang1.png",
+  "image2": "khautrang2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "10000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5dee"
+  },
+  "id": "57",
+  "type": "essentials",
+  "name": "Hộp khẩu trang",
+  "image": "hopkhautrang1.png",
+  "image1": "hopkhautrang1.png",
+  "image2": "hopkhautrang2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "35000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5def"
+  },
+  "id": "58",
+  "type": "essentials",
+  "name": "Sensodyne",
+  "image": "sensodyne.png",
+  "image1": "sensodyne1.png",
+  "image2": "sensodyne2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "50000"
+},{
+  "_id": {
+    "$oid": "62f9e6b8d87d19bdef3b5df0"
+  },
+  "id": "59",
+  "type": "essentials",
+  "name": "Dầu gội Clear",
+  "image": "daugoiclear.png",
+  "image1": "daugoiclear1.png",
+  "image2": "daugoiclear2.png",
+  "upto": "2",
+  "amount": "30",
+  "price": "55000"
+}]

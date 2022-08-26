@@ -1,0 +1,480 @@
+[
+  {
+    "_id": {
+      "$oid": "6306550caaf28454aabf8540"
+    },
+    "name": "Gói 1",
+    "image": "nyp1.png",
+    "limit": 2,
+    "time": "ngày",
+    "amount": 3,
+    "price": "204000",
+    "package": [
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dbb"
+        },
+        "amount": 2,
+        "amountMax": 2,
+        "_id": {
+          "$oid": "6306550caaf28454aabf8544"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dc6"
+        },
+        "amount": 2,
+        "amountMax": 2,
+        "_id": {
+          "$oid": "6306550caaf28454aabf8545"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dbd"
+        },
+        "amount": 1,
+        "amountMax": 1,
+        "_id": {
+          "$oid": "6306550caaf28454aabf8546"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dc9"
+        },
+        "amount": 1,
+        "amountMax": 1,
+        "_id": {
+          "$oid": "6306550caaf28454acdf8546"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dce"
+        },
+        "amount": 1,
+        "amountMax": 1,
+        "_id": {
+          "$oid": "6306550caaf28442acdf8546"
+        }
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1661359372164"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1661428861066"
+      }
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6306550caaf28454aabf8541"
+    },
+    "name": "Gói 2",
+    "image": "nyp2.png",
+    "limit": 3,
+    "time": "ngày",
+    "amount": 3,
+    "price": "204000",
+    "package": [
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dbd"
+        },
+        "amount": 2,
+        "amountMax": 2,
+        "_id": {
+          "$oid": "6306550caaf28454aabf8548"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dcd"
+        },
+        "amount": 2,
+        "amountMax": 2,
+        "_id": {
+          "$oid": "6306550caaf28454aabf8549"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dc3"
+        },
+        "amount": 1,
+        "amountMax": 1,
+        "_id": {
+          "$oid": "6306550caaf28454aabf854a"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dc7"
+        },
+        "amount": 2,
+        "amountMax": 2,
+        "_id": {
+          "$oid": "6306550caaf28454cbbf8586"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dbf"
+        },
+        "amount": 2,
+        "amountMax": 2,
+        "_id": {
+          "$oid": "6306550caaf2cd54cbbf8586"
+        }
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1661359372164"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1661360918465"
+      }
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6306550caaf28454aabf8542"
+    },
+    "name": "Gói 3",
+    "image": "nyp3.png",
+    "limit": 3,
+    "time": "ngày",
+    "amount": 3,
+    "price": "204000",
+    "package": [
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dc4"
+        },
+        "amount": 1,
+        "amountMax": 1,
+        "_id": {
+          "$oid": "6306550caaf28454aabf854c"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dd1"
+        },
+        "amount": 3,
+        "amountMax": 3,
+        "_id": {
+          "$oid": "6306550caaf28454aabf854d"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dce"
+        },
+        "amount": 3,
+        "amountMax": 3,
+        "_id": {
+          "$oid": "6306550caaf28454aabf854e"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dcf"
+        },
+        "amount": 3,
+        "amountMax": 3,
+        "_id": {
+          "$oid": "6306550caaf25454aabf854e"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5ddb"
+        },
+        "amount": 3,
+        "amountMax": 3,
+        "_id": {
+          "$oid": "6306550caaf25484aabf854e"
+        }
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1661359372165"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1661404212810"
+      }
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6306550caaf28454aabf8543"
+    },
+    "name": "Gói 4",
+    "image": "nyp4.png",
+    "limit": 3,
+    "time": "ngày",
+    "amount": 3,
+    "price": "204000",
+    "package": [
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dc2"
+        },
+        "amount": 2,
+        "amountMax": 2,
+        "_id": {
+          "$oid": "6306550caaf28454aabf854c"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dc3"
+        },
+        "amount": 1,
+        "amountMax": 1,
+        "_id": {
+          "$oid": "6306550caaf28454aabf854d"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dc3"
+        },
+        "amount": 3,
+        "amountMax": 3,
+        "_id": {
+          "$oid": "6306550caaf28454aabf854e"
+        }
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1661359372165"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1661404212810"
+      }
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6306550caaf28454aabf8544"
+    },
+    "name": "Gói 5",
+    "image": "nyp5.png",
+    "limit": 3,
+    "time": "ngày",
+    "amount": 3,
+    "price": "204000",
+    "package": [
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dd0"
+        },
+        "amount": 3,
+        "amountMax": 3,
+        "_id": {
+          "$oid": "6306550caaf28454aabf854c"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dca"
+        },
+        "amount": 1,
+        "amountMax": 1,
+        "_id": {
+          "$oid": "6306550caaf28454aabf854d"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dc1"
+        },
+        "amount": 2,
+        "amountMax": 2,
+        "_id": {
+          "$oid": "6306550caaf28454aabf854e"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5db7"
+        },
+        "amount": 3,
+        "amountMax": 3,
+        "_id": {
+          "$oid": "6306550caaf28454aabf854d"
+        }
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1661359372165"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1661404212810"
+      }
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6306550caaf28454aabf8545"
+    },
+    "name": "Gói 6",
+    "image": "nyp6.png",
+    "limit": 3,
+    "time": "ngày",
+    "amount": 3,
+    "price": "204000",
+    "package": [
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dc6"
+        },
+        "amount": 3,
+        "amountMax": 3,
+        "_id": {
+          "$oid": "6306550caaf28454aabf854c"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dbd"
+        },
+        "amount": 3,
+        "amountMax": 3,
+        "_id": {
+          "$oid": "6306550caaf28454aabf854d"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dce"
+        },
+        "amount": 3,
+        "amountMax": 3,
+        "_id": {
+          "$oid": "6306550caaf28454aabf854e"
+        }
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1661359372165"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1661404212810"
+      }
+    },
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6306550caaf28454aabf8546"
+    },
+    "name": "Gói 7",
+    "image": "nyp7.png",
+    "limit": 3,
+    "time": "ngày",
+    "amount": 3,
+    "price": "204000",
+    "package": [
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dbe"
+        },
+        "amount": 2,
+        "amountMax": 2,
+        "_id": {
+          "$oid": "6306550caaf28454aabf854c"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5ddb"
+        },
+        "amount": 2,
+        "amountMax": 2,
+        "_id": {
+          "$oid": "6306550caaf28454aabf854d"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dcb"
+        },
+        "amount": 1,
+        "amountMax": 1,
+        "_id": {
+          "$oid": "6306550caaf28454aabf854e"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dcc"
+        },
+        "amount": 1,
+        "amountMax": 1,
+        "_id": {
+          "$oid": "63066g0caaf28454aabf854e"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dc5"
+        },
+        "amount": 1,
+        "amountMax": 1,
+        "_id": {
+          "$oid": "63066g0c6go28454aabf854e"
+        }
+      },
+      {
+        "_itemid": {
+          "$oid": "62f9e6b8d87d19bdef3b5dc2"
+        },
+        "amount": 2,
+        "amountMax": 2,
+        "_id": {
+          "$oid": "63066g46tgo28454aabf854e"
+        }
+      }
+    ],
+    "createdAt": {
+      "$date": {
+        "$numberLong": "1661359372165"
+      }
+    },
+    "updatedAt": {
+      "$date": {
+        "$numberLong": "1661404212810"
+      }
+    },
+    "__v": 0
+  }
+]

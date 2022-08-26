@@ -1,0 +1,331 @@
+[{
+  "_id": {
+    "$oid": "630759c8ef56a4d6dbbc3de1"
+  },
+  "userName": "admin",
+  "name": "Trung",
+  "surName": "Thiều Vĩnh",
+  "passWord": "$2b$10$xJq5y50BLrKfw8CTPzPFiOkNfCJvCbQCfQtcIk3UlhYbz5F6WrMuG",
+  "confirmPassword": "$2b$10$T7TdqWLhRh2GdS2bq6x3pOPYFoQVIawhbxvcuRWI7m88ABIYvr70K",
+  "admin": true,
+  "manager": false,
+  "purchasedImages": [],
+  "purchasedTypes": [],
+  "purchasedNames": [],
+  "purchasedAmounts": [],
+  "purchasedStatus": [],
+  "listPatient": [],
+  "listRelative": [],
+  "credit": 0.2,
+  "deleted": false,
+  "purchased": [],
+  "payHistory": [],
+  "exchangeHistory": [],
+  "tokens": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1661426120357"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1661426344282"
+    }
+  },
+  "__v": 2
+},{
+  "_id": {
+    "$oid": "630759c8ef56a4d6dbbc3de3"
+  },
+  "userName": "admin",
+  "name": "Trung",
+  "surName": "Thiều Vĩnh",
+  "passWord": "$2b$10$HD1Rmi2R7jpXzehQnWUYquHRuCKt7Y9249THHv6.W1GaO1tKgZ1I2",
+  "confirmPassword": "$2b$10$8iw052Zw3sDCLQ47D2gDfe/bqeJ0KSAp9S2V3szzCdVncRycF.Z8K",
+  "admin": true,
+  "manager": false,
+  "purchasedImages": [],
+  "purchasedTypes": [],
+  "purchasedNames": [],
+  "purchasedAmounts": [],
+  "purchasedStatus": [],
+  "listPatient": [],
+  "listRelative": [],
+  "credit": 0.2,
+  "deleted": false,
+  "purchased": [],
+  "payHistory": [],
+  "exchangeHistory": [],
+  "tokens": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1661426120511"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1661426120511"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "630759f2ef56a4d6dbbc3df3"
+  },
+  "userName": "man",
+  "name": "Huỳnh Mẫn",
+  "phone": "012312123",
+  "gmail": "man@gmail.com",
+  "cmnd": "012345645",
+  "passWord": "$2b$10$cKolJ4c6KbRth6kJ.Car7.fC9RNSlw2txe8CqA7CD0UXTQoG4ynxW",
+  "confirmPassword": "$2b$10$lAxG/WODNmR4TOMXFfi6nucldRtimrjXFeiyb6VnDv0jCm7Ndk/Ri",
+  "admin": false,
+  "manager": true,
+  "image": "",
+  "isLogin": false,
+  "purchasedImages": [],
+  "purchasedTypes": [],
+  "purchasedNames": [],
+  "purchasedAmounts": [],
+  "purchasedStatus": [],
+  "listPatient": [
+    {
+      "$oid": "63075addef56a4d6dbbc3e1b"
+    }
+  ],
+  "listRelative": [],
+  "credit": 0.2,
+  "deleted": false,
+  "purchased": [],
+  "payHistory": [],
+  "exchangeHistory": [],
+  "tokens": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1661426162844"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1661426627823"
+    }
+  },
+  "__v": 5
+},{
+  "_id": {
+    "$oid": "63075a18ef56a4d6dbbc3df9"
+  },
+  "userName": "mana1",
+  "name": "Người quản lý 1",
+  "phone": "0212121212",
+  "gmail": "manager1@gmail.com",
+  "cmnd": "45454545",
+  "passWord": "$2b$10$Jb89/lwLz32N5VTq63M7o.fGNNeidpKz7kJiMzfsCfr1Eq741b3DG",
+  "confirmPassword": "$2b$10$IzgQa842e1tn5XRfdEqU1uCToMCEo/zDtEsWDZdWv0CfFG2pinvVG",
+  "admin": false,
+  "manager": true,
+  "image": "",
+  "isLogin": false,
+  "purchasedImages": [],
+  "purchasedTypes": [],
+  "purchasedNames": [],
+  "purchasedAmounts": [],
+  "purchasedStatus": [],
+  "listPatient": [],
+  "listRelative": [],
+  "credit": 0.2,
+  "deleted": false,
+  "purchased": [],
+  "payHistory": [],
+  "exchangeHistory": [],
+  "tokens": [
+    {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzA3NWExOGVmNTZhNGQ2ZGJiYzNkZjkiLCJpYXQiOjE2NjE0MjYyMDAsImV4cCI6MTY2MTU5OTAwMH0.mxI5DTQrE7R_3_TyC1bFx2jmQ64XiZ1zsvNCQH9mevI",
+      "_id": {
+        "$oid": "63075a18ef56a4d6dbbc3dfa"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1661426200438"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1661426200438"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63075addef56a4d6dbbc3e1b"
+  },
+  "userName": "user1",
+  "name": "Người Người 1    ",
+  "surName": "Người",
+  "phone": "03232323",
+  "gmail": "2323@gmail.com",
+  "cmnd": "012121211212",
+  "birthday_day": 1,
+  "birthday_month": 12,
+  "birthday_year": 2003,
+  "sex": "male",
+  "passWord": "$2b$10$xoEjvxbd4eTwtl7jFEcTQOMPYq6oG9eFyobcrBDQ1muhv8WR2Grm.",
+  "confirmPassword": "$2b$10$Z5361dJkrqXL7STQOy1XGujurolHv9vjyi.gkjEFks9aPOVS1YGta",
+  "admin": false,
+  "manager": false,
+  "address": "123 Bình thạnh",
+  "image": "",
+  "AccountBalance": 76000,
+  "statusCovid": "F2",
+  "treatmentAddress": "Phường Cô Giang, Quận 1, TP.Hồ Chí Minh",
+  "debt": "35000",
+  "isLogin": false,
+  "purchasedImages": [],
+  "purchasedTypes": [],
+  "purchasedNames": [],
+  "purchasedAmounts": [],
+  "purchasedStatus": [],
+  "purchased": [
+    {
+      "image": "botngot.png",
+      "type": "food",
+      "name": "Aji-ngon",
+      "amount": 1,
+      "time": "25-8-2022 18:24:50",
+      "status": "Ghi nợ 15000",
+      "check": false,
+      "_id": {
+        "$oid": "63075c6230d135cf08b4617f"
+      }
+    },
+    {
+      "image": "bachi.png",
+      "type": "food",
+      "name": "Ba chỉ cuộn",
+      "amount": 1,
+      "time": "25-8-2022 18:29:46",
+      "status": "Ghi nợ 35000",
+      "check": false,
+      "_id": {
+        "$oid": "63075d7c0ddc174b789f32c2"
+      }
+    },
+    {
+      "image": "nyp1.png",
+      "name": "Gói 1",
+      "amount": 1,
+      "time": "25-8-2022 18:29:46",
+      "status": "Đã thanh toán",
+      "check": true,
+      "_id": {
+        "$oid": "6307647d0ddc174b789f32db"
+      }
+    }
+  ],
+  "payHistory": [
+    {
+      "time": "25-8-2022 18:24:50",
+      "active": "Thanh toán ghi nợ",
+      "currentMoney": "-15000",
+      "_id": {
+        "$oid": "63075c6230d135cf08b46180"
+      }
+    },
+    {
+      "time": "25-8-2022 18:29:46",
+      "active": "Nạp tiền",
+      "statusOld": "-15000",
+      "currentMoney": "35000",
+      "_id": {
+        "$oid": "63075d5f0ddc174b789f32b2"
+      }
+    },
+    {
+      "time": "25-8-2022 18:29:46",
+      "active": "Thanh toán ghi nợ",
+      "statusOld": "35000",
+      "currentMoney": "-20000",
+      "_id": {
+        "$oid": "63075d7c0ddc174b789f32c3"
+      }
+    },
+    {
+      "time": "25-8-2022 18:29:46",
+      "active": "Nạp tiền",
+      "statusOld": "-20000",
+      "currentMoney": "280000",
+      "_id": {
+        "$oid": "630764750ddc174b789f32d2"
+      }
+    },
+    {
+      "time": "25-8-2022 18:29:46",
+      "active": "Thanh toán gói",
+      "statusOld": "280000",
+      "currentMoney": "76000",
+      "_id": {
+        "$oid": "6307647d0ddc174b789f32dc"
+      }
+    }
+  ],
+  "listPatient": [],
+  "listRelative": [],
+  "credit": 0.2,
+  "deleted": false,
+  "exchangeHistory": [
+    {
+      "time": "25-8-2022 18:14:43",
+      "status": "F1",
+      "statusOld": "F0",
+      "activeOld": "Phường Bến Nghé, Quận 1, TP.Hồ Chí Minh",
+      "active": "Phường Bến Nghé, Quận 1, TP.Hồ Chí Minh",
+      "_id": {
+        "$oid": "63075b81ef56a4d6dbbc3e35"
+      }
+    },
+    {
+      "time": "25-8-2022 18:14:43",
+      "status": "F2",
+      "statusOld": "F1",
+      "activeOld": "Phường Bến Nghé, Quận 1, TP.Hồ Chí Minh",
+      "active": "Phường Bến Nghé, Quận 1, TP.Hồ Chí Minh",
+      "_id": {
+        "$oid": "63075b99ef56a4d6dbbc3e42"
+      }
+    },
+    {
+      "time": "25-8-2022 18:14:43",
+      "status": "F0",
+      "statusOld": "F2",
+      "activeOld": "Phường Bến Nghé, Quận 1, TP.Hồ Chí Minh",
+      "active": "Phường Bến Nghé, Quận 1, TP.Hồ Chí Minh",
+      "_id": {
+        "$oid": "63075bb9ef56a4d6dbbc3e5b"
+      }
+    },
+    {
+      "time": "25-8-2022 18:14:43",
+      "status": "F2",
+      "statusOld": "F0",
+      "activeOld": "Phường Bến Nghé, Quận 1, TP.Hồ Chí Minh",
+      "active": "Phường Cô Giang, Quận 1, TP.Hồ Chí Minh",
+      "_id": {
+        "$oid": "63075bc1ef56a4d6dbbc3e63"
+      }
+    }
+  ],
+  "tokens": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1661426397776"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1661431587073"
+    }
+  },
+  "__v": 13
+}]
