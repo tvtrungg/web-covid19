@@ -1,0 +1,207 @@
+<div class="home">
+    <div class="header-home">
+        <div class="text">Edit List</div>
+
+        <div class="header-home-content">
+            <div class="home-search">
+                <input id="searchtext" type="search" placeholder="What are you looking for?">
+                <button id="search_btn"><i class='bx bx-search icon'></i></button>
+            </div>
+
+            <div class="account">
+                <div class="account-img">
+                    <img src="/img/admin.png" alt="admin">
+                </div>
+                <div class="account-text">
+                    <p class="account-name">{{user.name}}</p>
+                    <p style="font-size: 14px;float: left;opacity: 0.6;margin-right: 5px;">Admin</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-home">
+        <div class="content-home_admin_list content-home_admin_hospital">
+            <table class="admin__content-listUser">
+                <div class="edit-list">
+                    <h2>DANH SÁCH NGƯỜI QUẢN LÝ</h2>
+                </div>
+                <thead>
+                    <tr class="thead_Admin_list">
+                        <th>Stt</th>
+                        <th>Tên quản lý</th>
+                        <th>User Name</th>
+                        <th>CMND</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each managers}}
+                    <tr class="td_Admin">
+                        <td class="idManager" style="display:none">{{_id}}</td>
+                        <td class="td_ManagerSTT">{{@index}}</td>
+                        <td class="td_ManagerName">{{name}}</td>
+                        <td class="td_ManagerAddress">{{userName}}</td>
+                        <td class="td_ManagerDate">{{cmnd}}</td>
+
+                        {{#if this.deleted }}
+                        <td class="rong" style="width:8%   "></td>
+                        <td class="td_UnLock" style="width:9%"><a href="/admin/restore/{{_id}}"><button
+                                    class="lock_btn">Mở Khóa</button></a></td>
+                        <td class="rong" style="width:7%"></td>
+                        {{else}}
+                        <td class="td_Edit"><button class="update_btn">Điều chỉnh</button></td>
+                        <td class="td_Lock"><a href="/admin/lock/{{_id}}"><button class="lock_btn">Khóa</button></a>
+                        <td class="td_History"><button class="delete_btn">Lịch sử</button></td>
+                        </td>
+
+                        {{/if}}
+
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <div class="add_hospital">
+                <button class="btn-add"><i class=''>Thêm Người Quản Lý</i></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="screen"></div>
+
+<div class="container-edit-manager">
+    <div class="edit-manager-header">
+        <h2>Chỉnh sửa</h2>
+        <button class="close-edit-manager"><i class='bx bx-x icon'></i></button>
+    </div>
+    <div class="row-bottom">
+        <form class="content-row-bottom noScroll" action="/admin/editUser" method="POST">
+            <input class="inputIdManager" name="idManager" style="display:none" value="{{_id}}">
+            <div class="content-info">
+                <div class="spaceManager content-name">
+                    <p>Name</p>
+                    <input name="nameEdit" type="text" placeholder="Name" autocomplete="off"required>
+                </div>
+                <div class="spaceManager content-cmnd">
+                    <p>CMND</p>
+                    <input name="cmndEdit" type="text" placeholder="CMND" autocomplete="off" required>
+                </div>
+            </div>
+            <div class="spaceManager username field form-register">
+                <input name="userNameEdit" type="username" placeholder="Username" autocomplete="off" required>
+            </div>
+            <div class="edit_manager">
+                <button type="submit">Chỉnh sửa</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div class="container-add-manager">
+    <div class="add-manager-header">
+        <h2>Thêm người Quản Lý</h2>
+        <button class="close-add-manager"><i class='bx bx-x icon'></i></button>
+    </div>
+    <div class="row-top">
+        <img src="/img/logo.png" alt="Nhu yếu phẩm 1">
+    </div>
+
+    <div class="row-bottom">
+        <form class="content-row-bottom " action="/admin/addManager" method="POST">
+            <div class="content-info">
+                <div class="spaceManager content-name">
+                    <p>Name</p>
+                    <input name="name" type="text" placeholder="Name" autocomplete="off" required>
+                </div>
+                <div class="spaceManager content-cmnd">
+                    <p>CMND</p>
+                    <input name="cmnd" type="text" placeholder="CMND" autocomplete="off" required>
+                </div>
+            </div>
+
+            <div class="content-info">
+                <div class="spaceManager content-name">
+                    <input name="gmail" type="email" placeholder="Email" autocomplete="off" required>
+                </div>
+                <div class="spaceManager content-cmnd">
+                    <input name="phone" placeholder="Mobile number" autocomplete="off" required>
+                </div>
+            </div>
+
+            <div class="spaceManager username field form-register">
+                <input name="userName" type="username" placeholder="Username" autocomplete="off" required>
+            </div>
+
+            <div class="spaceManager form-password field form-register">
+                <input name="passWord" type="password" class="password" placeholder="Password" required>
+            </div>
+
+            <div class="spaceManager form-password field form-register">
+                <input name="confirmPassword" type="password" class="password" placeholder="Confirm a password"
+                    required>
+                <i class="uil uil-eye-slash showHidePw"></i>
+            </div>
+            <div class="error_acc">{{post.errPass}}</div>
+
+            <button type="submit" class="register_manager">Register</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    /*Add Patient*/
+    const buttonAdd = document.querySelector('.btn-add'),
+        buttonCloseAdd = document.querySelector('.close-add-manager'),
+        add_manager = document.querySelector('.container-add-manager'),
+        display_screen = document.querySelector('.screen'),
+        body_display = document.querySelector('body'),
+
+        buttonCloseEdit = document.querySelector('.close-edit-manager'),
+        edit_manager = document.querySelector('.container-edit-manager'),
+        idManager = document.querySelector('.idManager'),
+        inputIdManager = document.querySelector('.inputIdManager');
+
+
+
+
+    buttonAdd.addEventListener("click", () => {
+        add_manager.classList.add("active");
+        display_screen.classList.add("active");
+        body_display.classList.add("active");
+
+    });
+
+
+    buttonCloseAdd.addEventListener("click", () => {
+        add_manager.classList.remove("active");
+        display_screen.classList.remove("active");
+        body_display.classList.remove("active");
+
+    });
+
+    $('.update_btn').click(function () {
+        edit_manager.classList.add("active");
+        display_screen.classList.add("active");
+        body_display.classList.add("active");
+        var id = $(this).closest('tr').find('.idManager').text();
+        var name = $(this).closest('tr').find('.td_ManagerName').text();
+        var cmnd = $(this).closest('tr').find('.td_ManagerAddress').text();
+        var username = $(this).closest('tr').find('.td_ManagerDate').text();
+        inputIdManager.value = id;
+
+        $('input[name="nameEdit"]').val(name);
+        $('input[name="cmndEdit"]').val(cmnd);
+        $('input[name="userNameEdit"]').val(username);
+    });
+
+    buttonCloseEdit.addEventListener("click", () => {
+        edit_manager.classList.remove("active");
+        display_screen.classList.remove("active");
+        body_display.classList.remove("active");
+
+    });
+
+</script>

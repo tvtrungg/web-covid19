@@ -1,0 +1,119 @@
+<nav class="sidebar close">
+  <header>
+    <div class="image-text">
+      <span class="image">
+        <img src="/img/logo.png" alt="" />
+      </span>
+
+      <div class="text logo-text">
+        <span class="name">MT</span>
+        <span class="profession">Covid System</span>
+      </div>
+    </div>
+
+    <i class="bx bx-chevron-right toggle"></i>
+  </header>
+
+  <div class="menu-bar">
+    <div class="menu">
+
+      <li class="search-box">
+        <i class="bx bx-search icon"></i>
+        <input type="text" placeholder="Tìm kiếm..." />
+      </li>
+
+      <ul class="menu-links">
+        <li class="dashboard-button">
+          <a href="/user/{{user._id}}/dashboard">
+            <i class="bx bx-home-alt icon"></i>
+            <span class="text nav-text">Trang chủ</span>
+          </a>
+        </li>
+
+        <li class="patient-list-button">
+          <a href="/user/{{user._id}}/infoUser">
+            <i class="bx bx-user icon"></i>
+            <span class="text nav-text">Thông tin cá nhân</span>
+          </a>
+        </li>
+
+        <li class="managementHistory-button">
+          <a href="/user/{{user._id}}/managementHistory">
+            <i class='bx bx-history icon'></i>
+            <span class="text nav-text">Lịch sử quản lý</span>
+          </a>
+        </li>
+
+        <li class="necessities-button">
+          <a href="/user/{{user._id}}/shopping/1">
+            <i class="bx bx-cart-alt icon"></i>
+            <span class="text nav-text">Nhu yếu phẩm</span>
+          </a>
+        </li>
+
+        <li class="package-button">
+          <a href="/user/{{user._id}}/package">
+            <i class="bx bx-package icon"></i>
+            <span class="text nav-text">Gói nhu yếu phẩm</span>
+          </a>
+        </li>
+
+        <li class="recharge-button">
+          <a href="/user/{{user._id}}/recharge">
+            <i class='bx bx-money icon'></i>
+            <span class="text nav-text">Nạp tiền</span>
+          </a>
+        </li>
+
+        <li class="password-button">
+          <a href="/user/{{user._id}}/password">
+            <i class='bx bx-lock icon'></i>
+            <span class="text nav-text">Đổi mật khẩu</span>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+
+    <div class="bottom-content">
+      <li class="">
+        <a href="/user/logout">
+          <i class="bx bx-log-out icon"></i>
+          <span class="text nav-text">Đăng xuất</span>
+        </a>
+      </li>
+
+      <li class="mode">
+        <div class="sun-moon">
+          <i class="bx bx-moon icon moon"></i>
+          <i class="bx bx-sun icon sun"></i>
+        </div>
+        <span class="mode-text text">Dark mode</span>
+
+        <div class="toggle-switch">
+          <span class="switch"></span>
+        </div>
+      </li>
+
+    </div>
+  </div>
+</nav>
+<script src="/jquery-3.4.1.min.js"></script>
+<script>
+  const Tag_a = document.querySelectorAll(".menu-links > li > a")
+  Tag_a.forEach(a => {
+    a.parentElement.classList.remove('active');
+    if (window.location.href == a.href) {
+      a.parentElement.classList.add('active');
+    } else {
+      a.parentElement.classList.remove('active');
+
+    }
+  })
+
+  if (window.location.href.split("/").at(5) == "shopping") {
+    document.querySelector(".necessities-button").classList.add('active');
+  }
+
+
+</script>

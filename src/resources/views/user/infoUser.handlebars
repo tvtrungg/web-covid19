@@ -1,0 +1,212 @@
+<div class="home">
+    <div class="header-home">
+        <div class="text">Information</div>
+
+        <div class="header-home-content">
+            <div class="home-search">
+                <input id="searchtext" type="search" placeholder="What are you looking for?">
+                <button id="search_btn"><i class='bx bx-search icon'></i></button>
+            </div>
+            <button id="cart">
+                <i class='bx bx-shopping-bag'></i>
+                <small class="items_amount">0</small>
+            </button>
+
+            <ul id="noti_nav">
+                <li>
+                    <div class="btn_info" style="line-height: 55px;margin-left: 6px;"><i class="bx bx-bell icon"></i></div>
+                    <div class="subnav">
+                        {{#each user.notification}}
+                        <p>{{time}}</p>
+                        <p>{{content}}</p>
+
+                        {{/each}}
+                    </div>
+                </li>
+            </ul>
+
+            <div class="account">
+                <div class="account-img">
+                    <img src="/img/user.png" alt="user">
+                </div>
+                <div class="account-text">
+                    <p class="account-name">{{user.surName}} {{user.name}}</p>
+                    <p style="font-size: 14px;float: left;opacity: 0.6;margin-right: 5px;">Số dư :</p>
+                    <p class="account-permission">{{user.AccountBalance}}</p>
+                </div>
+            </div>
+
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Giỏ Hàng</h5>
+                        <span class="close_modal">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-stt cart-header cart-column">Stt</span>
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span class="cart-total-price">0 VNĐ</span>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary close-footer">Đóng</button>
+                            <button type="button" class="btn btn-primary order">Thanh Toán</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="content-home">
+        <div class="tm-main">
+            <!-- Gallery section -->
+            <div class="tm-section-wrap">
+                <section id="gallery" class="tm-section">
+                    <ul class="tm-gallery-links layoutInfoUser">
+                        <div class="options-itemUsers">
+                            <!-- filer_button -->
+                            <li id="User" class="active">
+                                <a href="javascript:void(0);" class="active tm-gallery-link filter" data-filter="all">
+                                    <i class='bx bx-user icon'></i>
+                                    <i class="fas fa-layer-group tm-gallery-link-icon"></i>
+                                    <span>Thông tin</span>
+                                </a>
+                            </li>
+                            <li id="Shopping">
+                                <a href="javascript:void(0);" class="tm-gallery-link filter" data-filter="food">
+                                    <i class='bx bx-cart-alt icon'></i>
+                                    <i class="fas fa-portrait tm-gallery-link-icon"></i>
+                                    <span>Đã mua</span>
+                                </a>
+                        </div>
+                    </ul>
+
+                    <div id="display_User" class="infoUser">
+                        <div class="infoUser-content">
+                            <div class="col-left">
+                                <img src="/img/user.png" alt="">
+                                <p class="col-left-name">{{user.name}}</p>
+                                <p class="col-left-cmnd"=>CMND: {{user.cmnd}}</p>
+                            </div>
+                            <div class="col-center">
+                                <h2>Thông tin cá nhân</h2>
+                                <div class="center-info">
+                                    <div class="space center_name">
+                                        <p>Name</p>
+                                        <input type="text" disabled value="{{user.surName}} {{user.name}}">
+                                    </div>
+                                    <div class="space center_cmnd">
+                                        <p>CMND</p>
+                                        <input type="text" disabled value="{{user.cmnd}}">
+                                    </div>
+                                </div>
+
+                                <div class="space center_birthday">
+                                    <p>Ngày sinh</p>
+                                    <input type="text" disabled
+                                        value="{{user.birthday_day}}/{{user.birthday_month}}/{{user.birthday_year}}">
+                                </div>
+
+                                <div class="space center_address">
+                                    <p>Địa chỉ</p>
+                                    <input type="text" disabled value="{{user.address}}">
+                                </div>
+
+                            </div>
+                            <div class="col-right">
+                                <h2>Thông tin Covid</h2>
+                                <div class="space right_status">
+                                    <p>Trạng Thái</p>
+                                    <input type="text" disabled value="{{user.statusCovid}}">
+                                </div>
+
+                                <div class="space right_treatment_address">
+                                    <p>Địa chỉ điều trị</p>
+                                    <input type="text" value="{{user.treatmentAddress}}" disabled>
+                                </div>
+
+                                <div class="space right_treatment_address">
+                                    <h3>Danh sách người liên quan covid</h3>
+                                    <table>
+                                        <thead>
+                                            <th>STT</th>
+                                            <th>Họ tên</th>
+                                            <th>CMND</th>
+                                            <th>Trạng thái</th>
+
+                                        </thead>
+                                        <tbody>
+                                            {{#each listRelatives}}
+                                            <tr>
+                                                <td>{{@index}}</td>
+                                                <td>{{name}}</td>
+                                                <td>{{cmnd}}</td>
+                                                <td>{{status}}</td>
+                                            </tr>
+                                            {{/each}}
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div id="display_Shopping" style="display:none">
+                        <div id="purchased" class="tm-gallery ">
+
+                            <div class="content-home_admin_list">
+                                <div class="admin__info admin__content">
+                                    <table class="admin__content-listUser tableInfoUser">
+                                        <thead>
+                                            <tr class="thead_Admin">
+                                                <th>Stt</th>
+                                                <th>Ảnh sản phẩm</th>
+                                                <th>Tên món hàng</th>
+                                                <th>Số lượng mua</th>
+                                                <th>Thời gian mua</th>
+                                                <th>Tình trạng</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbodyInfoUser">
+                                            {{#each user.purchased}}
+                                            <tr class="td_Admin">
+                                                <td class="td_ItemSTT">{{@index}}</td>
+                                                <td class="td_ItemImg">
+                                                    {{#if this.check }}
+                                                    <img class="image1" src="/img/Package/{{image}}" alt="{{name}}">
+                                                    {{else}}
+                                                    <img class="image1" src="/img/Neccessities/{{type}}/{{image}}"
+                                                        alt="{{name}}">
+                                                    {{/if}}
+                                                </td>
+                                                <td class="td_ItemName">{{name}} </td>
+                                                <td class="td_ItemCMND">{{amount}}</td>
+                                                <td class="td_ItemDate">{{time}}</td>
+                                                <td class="td_ItemStatus">{{status}}</td>
+                                            </tr>
+
+                                            {{/each }}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>

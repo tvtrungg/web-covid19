@@ -1,0 +1,102 @@
+<div class="content">
+    <div class="forms_sign-in">
+        <!-- Sign In -->
+        <div class="form content-sign-in">
+            <div class="sign-text">Sign In</div>
+
+            <form class="form_sign-in" action="/user/login" method="POST">
+                <div class="field form-sign-in">
+                    <span class="bx bxs-user"></span>
+                    <input name="userName" id="userName" type="text" placeholder="Username" required>
+                </div>
+                    <div class="error_acc">{{post.errUserName}}</div>
+
+                <div class="field form-sign-in">
+                    <span class="bx bxs-lock-alt"></span>
+                    <input name="passWord" type="password" id="passWord" class="password" placeholder="Password"
+                        required>
+                    <i class="uil uil-eye-slash showHidePw"></i>
+                </div>
+                <div class="error_acc">{{post.errPass}}</div>
+                <div class="checkbox-text">
+                    <div class="checkbox-content">
+                        <input type="checkbox" id="logCheck">
+                        <label for="logCheck" class="text">Remember me</label>
+                    </div>
+
+                    <a href="#" class="text">Forgot password?</a>
+                </div>
+
+                <button type="submit" onclick="login()">Sign In</button>
+
+                <h4>or Sign Up with social platforms</h4>
+
+                <div class="social_icon">
+                    <i class='bx bxl-facebook' title='Facebook'></i>
+                    <i class='bx bxl-discord-alt' title='Discord'></i>
+                    <i class='bx bxl-twitter' title="Twitter"></i>
+                    <i class='bx bxl-google' title="Google"></i>
+                </div>
+            </form>
+
+
+        </div>
+
+        <!-- Register -->
+
+    </div>
+
+</div>
+<!-- Chế độ sáng tối -->
+<div class="drak-light">
+    <i class="bx bx-moon moon"></i>
+    <i class="bx bx-sun sun"></i>
+</div>
+
+<script>
+    const body = document.querySelector("body"),
+        modeToggle = document.querySelector(".drak-light")
+    if (modeToggle != null) {
+        modeToggle.addEventListener("click", () => {
+            modeToggle.classList.toggle("active");
+            body.classList.toggle("dark");
+            if (!body.classList.contains("dark")) {
+                localStorage.setItem("mode", "light-mode");
+            }
+            else {
+                localStorage.setItem("mode", "dark-mode");
+            }
+        })
+    }
+
+    const content = document.querySelector(".content"),
+        pwShowHide = document.querySelectorAll(".showHidePw"),
+        pwFields = document.querySelectorAll(".password"),
+        signUp = document.querySelector(".signup-link"),
+        login = document.querySelector(".login-link"),
+        checkbox = document.querySelectorAll(".allow"),
+        checkboxLabel = document.querySelectorAll(".allow-label");
+
+
+    // //   js code to show/hide password and change icon
+    // eyeIcon là cái icon trong khung passworlogind
+    pwShowHide.forEach(eyeIcon => {
+        eyeIcon.addEventListener("click", () => {
+            pwFields.forEach(pwField => {
+                if (pwField.type === "password") {
+                    pwField.type = "text";
+
+                    pwShowHide.forEach(icon => {
+                        icon.classList.replace("uil-eye-slash", "uil-eye");
+                    })
+                } else {
+                    pwField.type = "password";
+
+                    pwShowHide.forEach(icon => {
+                        icon.classList.replace("uil-eye", "uil-eye-slash");
+                    })
+                }
+            })
+        })
+    })
+</script>

@@ -1,0 +1,184 @@
+<div class="home">
+    <div class="header-home">
+        <div class="text">Edit Hospital</div>
+
+        <div class="header-home-content">
+            <div class="home-search">
+                <input id="searchtext" type="search" placeholder="What are you looking for?">
+                <button id="search_btn"><i class='bx bx-search icon'></i></button>
+            </div>
+
+            <div class="account">
+                <div class="account-img">
+                    <img src="/img/admin.png" alt="admin">
+                </div>
+                <div class="account-text">
+                    <p class="account-name">{{user.name}}</p>
+                    <p style="font-size: 14px;float: left;opacity: 0.6;margin-right: 5px;">Admin</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-home">
+        <div class="content-home_admin_hospital">
+            <table class="admin__content-listUser tableHospital">
+                <div class="edit-list">
+                    <h2>DANH SÁCH ĐỊA ĐIỂM ĐIỀU TRỊ</h2>
+                </div>
+                <thead>
+                    <tr class="thead_Admin_hospital">
+                        <th>Stt</th>
+                        <th>Tên Bệnh Viện</th>
+                        <th>Địa Chỉ</th>
+                        <th>Sức Chứa</th>
+                        <th>Số Lượng Tiếp Nhận</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each hospitals}}
+                    <tr class="td_Admin">
+                        <td class="idHospital" style="display:none">{{_id}}</td>
+                        <td class="td_HospitalSTT">{{@index}}</td>
+                        <td class="td_HospitalName">{{name}}</td>
+                        <td class="td_HospitalAddress">{{address}}</td>
+                        <td class="td_HospitalDate">{{capacity}}</td>
+                        <td class="td_HospitalAmount">{{intake}}</td>
+                        <td class=""><button class="edit_hospital">Điều chỉnh</button></td>
+                        <td class="delete_Hospital_btn"><a href="/admin/deleteHospital/{{_id}}"><button class="delete-btn">Xóa</button></a></td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <div class="add_hospital">
+                <button class="btn-add"><i class=''>Thêm Địa Điểm</i></button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="screen"></div>
+
+<div class="container-edit-manager container-edit-hospital">
+    <div class="edit-manager-header">
+        <h2>Chỉnh sửa</h2>
+        <button class="close-edit-manager"><i class='bx bx-x icon'></i></button>
+    </div>
+    <div class="row-bottom">
+        <form class="content-row-bottom noScroll" action="/admin/editHospital" method="POST">
+            <input class="inputIdHospital" name="idHospital" style="display:none" value="{{_id}}">
+            <div class="spaceManager spaceHospital content-cmnd">
+                <select name="wardEdit" id="hospitalSelect1">
+                    {{#each wards}}
+                    <option name="optionEdit" value="{{_id}}">{{name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+            <div class="spaceManager spaceHospital content-name">
+                <input name="nameHospital" type="text" placeholder="Tên bệnh viện" required>
+            </div>
+
+            <div class="spaceManager spaceHospital username field form-register">
+                <input name="capacityEdit" type="number" placeholder="Sức chứa" required>
+            </div>
+            <div class="spaceManager spaceHospital username field form-register">
+                <input name="incakeEdit" type="number" placeholder="Số lượng tiếp nhận" required>
+            </div>
+            <div class="edit_manager">
+                <button type="submit">Chỉnh sửa</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+<div class="container-add-manager container-add-hospitals">
+    <div class="add-manager-header">
+        <h2>Thêm bệnh viện</h2>
+        <button class="close-add-manager"><i class='bx bx-x icon'></i></button>
+    </div>
+    <div class="row-top">
+        <img src="/img/logo.png" alt="Nhu yếu phẩm 1">
+    </div>
+
+    <div class="row-bottom">
+        <form class="content-row-bottom content-add-hospital" action="/admin/addHospital" method="POST">
+            <div class="content-info">
+                <div class="spaceManager content-cmnd">
+                    <select name="wardSelect" id="hospitalSelect2">
+                        {{#each wards}}
+                        <option value="{{_id}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+            <div class="spaceManager spaceHopitals content-name">
+                <input name="nameHospital" type="text" placeholder="Tên bệnh viện" autocomplete="off" required>
+            </div>
+            <div class="spaceManager username field form-register">
+                <input name="capacity" type="number" placeholder="Sức chứa" autocomplete="off" required>
+            </div>
+
+            <div class="spaceManager form-password field form-register">
+                <input name="intake" type="number" class="password" placeholder="Số lượng tiếp nhận" required>
+            </div>
+            <button type="submit" class="register_manager btn_addHospital">Thêm bệnh viện</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    /*Add Patient*/
+    const buttonAdd = document.querySelector('.btn-add'),
+        buttonCloseAdd = document.querySelector('.close-add-manager'),
+        add_manager = document.querySelector('.container-add-manager'),
+        display_screen = document.querySelector('.screen'),
+        body_display = document.querySelector('body'),
+        buttonCloseEdit = document.querySelector('.close-edit-manager'),
+        edit_manager = document.querySelector('.container-edit-manager'),
+        inputIdHospital = document.querySelector('.inputIdHospital');
+
+
+    buttonAdd.addEventListener("click", () => {
+        add_manager.classList.add("active");
+        display_screen.classList.add("active");
+        body_display.classList.add("active");
+
+    });
+
+    buttonCloseAdd.addEventListener("click", () => {
+        add_manager.classList.remove("active");
+        display_screen.classList.remove("active");
+        body_display.classList.remove("active");
+
+    });
+
+    $('.edit_hospital').click(function () {
+        edit_manager.classList.add("active");
+        display_screen.classList.add("active");
+        body_display.classList.add("active");
+
+        var id = $(this).closest('tr').find('.idHospital').text();
+        var name = $(this).closest('tr').find('.td_HospitalName').text();
+        var address = $(this).closest('tr').find('.td_HospitalAddress').text();
+        var capacity = $(this).closest('tr').find('.td_HospitalDate').text();
+        var incake = $(this).closest('tr').find('.td_HospitalAmount').text();
+
+        inputIdHospital.value = id;
+        $('input[name="nameHospital"]').val(name);
+        $('input[name="capacityEdit"]').val(capacity);
+        $('input[name="incakeEdit"]').val(incake);
+
+
+    });
+
+    buttonCloseEdit.addEventListener("click", () => {
+        edit_manager.classList.remove("active");
+        display_screen.classList.remove("active");
+        body_display.classList.remove("active");
+
+    });
+
+</script>

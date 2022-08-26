@@ -1,0 +1,241 @@
+<div class="home">
+    <div class="header-home">
+        <div class="text">Necessities</div>
+
+        <div class="header-home-content">
+            <form class="home-search" action="/user/{{user._id}}/search" method="GET">
+                <input name="name" id="searchtext" type="search" placeholder="What are you looking for?"
+                    autocomplete="off">
+                <input name="type" type="text" style="display:none" value="product">
+                <button type="submit" id="search_btn"><i class='bx bx-search icon'></i></button>
+            </form>
+
+            <button id="cart">
+                <i class='bx bx-shopping-bag'></i>
+                <small class="items_amount">0</small>
+            </button>
+
+            <ul id="noti_nav">
+                <li>
+                    <div class="btn_info" style="line-height: 55px;margin-left: 6px;"><i class="bx bx-bell icon"></i>
+                    </div>
+                    <div class="subnav">
+                        {{#each user.notification}}
+                        <p>{{time}}</p>
+                        <p>{{content}}</p>
+
+                        {{/each}}
+                    </div>
+                </li>
+            </ul>
+            <div class="account">
+                <div class="account-img">
+                    <img src="/img/user.png" alt="">
+                </div>
+                <div class="account-text">
+                    <p class="account-name">{{user.surName}} {{user.name}}</p>
+                    <p style="font-size: 14px;float: left;opacity: 0.6;margin-right: 5px;">Số dư :</p>
+                    <p class="account-permission">{{user.AccountBalance}}</p>
+                </div>
+            </div>
+
+            <form id="myModal" class="modal" action="/user/buy" method="POST">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Giỏ Hàng</h5>
+                        <span class="close_modal">&times;</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-stt cart-header cart-column">Stt</span>
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div class="cart-items">
+
+                        </div>
+                        <div class="cart-total">
+                            <strong class="cart-total-title">Tổng Cộng:</strong>
+                            <span name="total" class="cart-total-price">0 VNĐ</span>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary close-footer">Đóng</button>
+                            <button type="submit" class="btn btn-primary order">Thanh Toán</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="content-home">
+        <div class="tm-main">
+            <!-- Gallery section -->
+            <div class="tm-section-wrap">
+                <section id="gallery" class="tm-section">
+                    <div class="home-header-text">
+                        <p>Danh sách sản phẩm</p>
+                    </div>
+
+                    <ul class="tm-gallery-links">
+                        <div class="options-items">
+                            <!-- filer_button -->
+                            <li id="shoppingAll" class="active" onclick="changeColor('shoppingAll')">
+                                <a href="/user/{{user._id}}/shopping/1" class="active tm-gallery-link filter"
+                                    data-filter="all">
+                                    <i class='bx bx-home-alt icon'></i>
+                                    <i class="fas fa-layer-group tm-gallery-link-icon"></i>
+                                    All
+                                </a>
+                            </li>
+                            <li id="shoppingFood" onclick="changeColor('shoppingFood')">
+                                <a href="/user/{{user._id}}/shopping/1/?type=food" class="tm-gallery-link filter"
+                                    data-filter="food">
+                                    <i class="fas fa-portrait tm-gallery-link-icon"></i>
+                                    FOOD
+                                </a>
+                            </li>
+                            <li id="shoppingDrinks" onclick="changeColor('shoppingDrinks')">
+                                <a href="/user/{{user._id}}/shopping/1?type=drinks" class="tm-gallery-link filter"
+                                    data-filter="drinks">
+                                    <i class="fas fa-leaf tm-gallery-link-icon"></i>
+                                    Drinks
+                                </a>
+                            </li>
+                            <li id="shoppingEssentials" onclick="changeColor('shoppingEssentials')">
+                                <a href="/user/{{user._id}}/shopping/1?type=essentials" class="tm-gallery-link filter"
+                                    data-filter="essentials">
+                                    <i class="fas fa-paw tm-gallery-link-icon"></i>
+                                    Essentials
+                                </a>
+                            </li>
+                        </div>
+                        <script>
+                            function Change() {
+                                var url = window.location.href;
+                                var type;
+                                var queryURL = new URL(url);
+                                var order = document.getElementById("sortOption").value;
+                                if (queryURL.searchParams.get("type") != 'undefined' && queryURL.searchParams.get("type") != 'null') {
+                                    type = queryURL.searchParams.get("type");
+                                    location.href = location.protocol + '//' + location.host + location.pathname + '?order=' + order;
+                                } else {
+                                    location.href = location.protocol + '//' + location.host + location.pathname + '?type=' + type + '&order=' + order;
+                                }
+                                console.log('This is a typeof : ', typeof (type))
+                            }
+
+                        </script>
+                        <div class="sort-items">
+                            <div class="home-header-select_1">
+                                <i class='bx bx-sort icon'></i>
+                                <select name="" id="sortOption" onchange="Change()">
+                                    <option value="default">Select an order</option>
+                                    <option id="nameincrease" value="nameincrease" onselect="Change()"
+                                        onchange="Change()">Name Increasing</option>
+                                    <option id="priceincrease" value="priceincrease" onselect="Change()"
+                                        onchange="Change()">Price Increasing</option>
+                                    <option id="namedecrease" value="namedecrease" onselect="Change()"
+                                        onchange="Change()">Name Decreasing</option>
+                                    <option id="pricedecrease" value="pricedecrease" onselect="Change()"
+                                        onchange="Change()">Price Decreasing</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </ul>
+                    <div class="CreditCharge" style="display:none">{{user.credit}}</div>
+                    <div id="list" class="tm-gallery layout_items">
+                        {{#each item}}
+                        <div class="tm-gallery-item">
+                            <div class="product_info" data-item={{type}} style="display: block;">
+                                <div class="product_info-img">
+                                    <div class="image_collection">
+                                        <img class="image1" src="/img/Neccessities/{{type}}/{{image}}" alt="{{name}}">
+                                        <img src="/img/Neccessities/{{type}}/{{image1}}" alt="{{name}}">
+                                        <img src="/img/Neccessities/{{type}}/{{image2}}" alt="{{name}}">
+                                    </div>
+                                </div>
+                                <div class="info">
+
+                                    <div class="idItem" style="display:none">{{_id}}</div>
+                                    <p class="name_package">{{name}}</p>
+                                    <div class="info_content">
+                                        <div class="amount_content">
+                                            <p class="amount-text">Số lượng còn: </p>
+                                            <p class="amount">{{amount}}</p>
+                                        </div>
+                                        <p class="price_text">Giá:</p>
+                                        <p class="price">{{price}} VNĐ</p>
+                                    </div>
+                                    <div class="info_button" id="{{id}}">
+                                        <button class="buy-button">
+                                            <i class='bx bx-shopping-bag'></i>
+                                            Mua Ngay
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                    <script>
+                        function paging(id, page, totalpage, gap) {
+                            var container = document.getElementById(id);
+                            var result = '';
+                            if (page - gap > 1)
+                                result += '<a href="1">' + '<button class="button_First">' + 'First' + '</button>' + '</a>';
+
+                            for (var i = page - gap; i < page; i++)
+                                if (i > 0)
+                                    result += '<a href="' + i + '">' + '<button>' + i + '</button>' + '</a>';
+
+                            result += '<button class="pageCurrent">' + page + '</button>';
+
+                            for (var i = page + 1; i <= page + gap; i++)
+                                if (i <= totalpage)
+                                    result += '<a href="' + i + '">' + '<button>' + i + '</button>' + '</a>';
+
+                            if (page + gap < totalpage)
+                                result += '<a href="' + totalpage + '">' + '<button class="button_Last">' + 'Last' + '</button>' + '</a>';
+
+                            container.innerHTML = result;
+                        }
+                    </script>
+                    <div id="pagination" class="tm-paging">
+                        <script>
+                            paging("pagination", {{ page }}, Math.ceil({{ itemcount }}/12), 2);
+                        </script>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const tag_a = document.querySelectorAll(".tm-gallery-links .options-items > li > a")
+    tag_a.forEach(a => {
+        a.parentElement.classList.remove('active');
+        if (window.location.href == a.href) {
+            a.parentElement.classList.add('active');
+        } else {
+            a.parentElement.classList.remove('active');
+        }
+    })
+    if (window.location.href.split("/").at(-2) == "food") {
+        document.getElementById("shoppingFood").classList.add('active');
+    }
+    if (window.location.href.split("/").at(-2) == "drinks") {
+        document.getElementById("shoppingDrinks").classList.add('active');
+    }
+    if (window.location.href.split("/").at(-2) == "essentials") {
+        document.getElementById("shoppingEssentials").classList.add('active');
+    }
+    if (window.location.href.split("/").at(-2) == "shopping") {
+        document.getElementById("shoppingAll").classList.add('active');
+    }
+
+</script>

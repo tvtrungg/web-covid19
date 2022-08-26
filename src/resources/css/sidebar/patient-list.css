@@ -1,0 +1,1289 @@
+/* Google Font Import - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    /* ===== Colors ===== */
+    --body-color: #E4E9F7;
+    --sidebar-color: #FFF;
+    --primary-color: #f44718;
+    --primary-color-light: #F6F5FF;
+    --toggle-color: #DDD;
+    --text-color: #707070;
+
+    /* ====== Transition ====== */
+    --tran-03: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.3s ease;
+    --tran-05: all 0.3s ease;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+::selection {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+body.dark {
+    --body-color: #18191a;
+    --sidebar-color: #242526;
+    --primary-color: #3a3b3c;
+    --primary-color-light: #3a3b3c;
+    --toggle-color: #fff;
+    --text-color: #ccc;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    padding: 10px 14px;
+    background: var(--sidebar-color);
+    transition: var(--tran-05);
+    z-index: 10;
+}
+
+.sidebar.close {
+    width: 88px;
+}
+
+/* ===== Reusable code - Here ===== */
+.sidebar li {
+    height: 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.sidebar header .image,
+.sidebar .icon {
+    min-width: 60px;
+    border-radius: 6px;
+}
+
+.sidebar .icon {
+    min-width: 60px;
+    border-radius: 6px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.sidebar .text,
+.sidebar .icon {
+    color: var(--text-color);
+    transition: var(--tran-03);
+}
+
+.sidebar .text {
+    font-size: 17px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 1;
+}
+
+.sidebar.close .text {
+    opacity: 0;
+}
+
+/* =========================== */
+
+.sidebar header {
+    position: relative;
+}
+
+.sidebar header .image-text {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar header .logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+header .image-text .name {
+    margin-top: 2px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+header .image-text .profession {
+    font-size: 16px;
+    margin-top: -2px;
+    display: block;
+}
+
+.sidebar header .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar header .image img {
+    width: 40px;
+    border-radius: 6px;
+}
+
+.sidebar header .toggle {
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%) rotate(180deg);
+    height: 25px;
+    width: 25px;
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+body.dark .sidebar header .toggle {
+    color: var(--text-color);
+}
+
+.sidebar.close .toggle {
+    transform: translateY(-50%) rotate(0deg);
+}
+
+.sidebar .menu {
+    margin-top: 20px;
+}
+
+.sidebar li.search-box {
+    border-radius: 6px;
+    background-color: var(--primary-color-light);
+    cursor: pointer;
+    transition: var(--tran-05);
+}
+
+.sidebar li.search-box input {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: var(--primary-color-light);
+    color: var(--text-color);
+    border-radius: 6px;
+    font-size: 17px;
+    font-weight: 500;
+    transition: var(--tran-05);
+}
+
+.sidebar li a {
+    list-style: none;
+    height: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: var(--tran-03);
+
+}
+
+
+.sidebar li a:hover {
+    background-color: var(--primary-color);
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text {
+    color: var(--sidebar-color);
+}
+
+body.dark .sidebar li a:hover .icon,
+body.dark .sidebar li a:hover .text {
+    color: var(--text-color);
+}
+
+/*=============== Menu bar ===============*/
+/* .sidebar .menu-bar {
+    height: calc(100% - 55px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+} */
+
+.menu-bar::-webkit-scrollbar {
+    display: none;
+}
+
+/*thuộc tính màu sidebar của Necessary*/
+/* .menu-links .patient-list-button {
+    background-color: var(--primary-color);
+    border-radius: 6px;
+} */
+
+.patient-list-button .icon,
+.patient-list-button .text {
+    color: #fff;
+
+}
+
+.sidebar .menu-bar .mode {
+    border-radius: 6px;
+    background-color: var(--primary-color-light);
+    position: relative;
+    transition: var(--tran-05);
+}
+
+
+.menu-bar .mode .sun-moon {
+    height: 50px;
+    width: 60px;
+}
+
+.mode .sun-moon i {
+    position: absolute;
+}
+
+.mode .sun-moon i.sun {
+    opacity: 0;
+}
+
+body.dark .mode .sun-moon i.sun {
+    opacity: 1;
+}
+
+body.dark .mode .sun-moon i.moon {
+    opacity: 0;
+}
+
+.menu-bar .bottom-content {
+    margin-top: 20px;
+    border-top: 1px solid var(--text-color);
+}
+
+.menu-bar .bottom-content .toggle-switch {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.toggle-switch .switch {
+    position: relative;
+    height: 22px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: var(--toggle-color);
+    transition: var(--tran-05);
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: var(--sidebar-color);
+    transition: var(--tran-04);
+}
+
+body.dark .switch::before {
+    left: 20px;
+}
+
+.home {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    height: 100vh;
+    width: calc(100% - 250px);
+    background-color: var(--body-color);
+    transition: var(--tran-05);
+}
+
+.home .header-home .text {
+    font-size: 30px;
+    font-weight: 500;
+    color: #000;
+    padding: 12px 0 0;
+}
+
+.home .header-home {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.header-home .home-search {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 65px;
+    padding: 12px 0 0;
+
+}
+
+.home-search input {
+    width: 85%;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    background-color: var(--primary-color-light);
+    color: var(--text-color);
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 15px;
+
+}
+
+.home-search button {
+    width: 10%;
+    height: 40px;
+    border-radius: 6px;
+    border: none;
+    font-size: 22px;
+    background-color: #ff7c58;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.home-search button:hover {
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+}
+
+.header-home .account {
+    border: 1px solid #000;
+    border-radius: 6px;
+    align-self: end;
+    padding: 5px;
+    margin: 3px;
+}
+
+.home .content-home_admin_list {
+    min-height: 100vh;
+    margin: 20px 30px;
+    background-color: #fff;
+}
+
+.home .content-home_admin_list thead {
+    width: 100%;
+}
+
+
+.home .content-home_admin_list table {
+    width: 85%;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+
+home .content-home_admin_list table {
+    width: 85%;
+    margin: 0 auto;
+    border: 1px solid #000;
+}
+
+.home .content-home_admin_list p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+    text-align: center;
+}
+
+body.dark .content-home_admin_list {
+    background-color: #28292a;
+}
+
+.container-home {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-self: stretch;
+    flex-flow: row wrap;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.sidebar.close~.home {
+    left: 78px;
+    height: 100vh;
+    width: calc(100% - 78px);
+}
+
+body.dark .home .text {
+    color: var(--text-color);
+}
+
+/* admin content */
+.admin__content {
+    flex: 3;
+    margin: 1rem;
+}
+
+.admin__content h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.admin__content .admin__content-listUser {
+    min-width: 100%;
+    border-collapse: collapse;
+    /* background-color: #fff; */
+    /* height: 100% ; */
+}
+
+.tableHospital {
+    margin-left: 5px;
+}
+
+body.dark .edit-list,
+body.dark .admin__content-listUser {
+    color: #fff;
+}
+
+
+.admin__content .admin__content-listUser thead {
+    font-size: 1.2rem;
+}
+
+
+.admin__content .admin__content-listUser tbody {
+    border-top: 1px solid blue;
+    font-size: 1rem;
+}
+
+.admin__content-listUser tbody tr {
+    border-top: solid 1px rgb(20, 18, 18);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.admin__content-listUser tr:first-child {
+    border-top: none
+}
+
+.admin__content-listUser tr:last-child {
+    border-bottom: solid 1px rgb(20, 18, 18);
+}
+
+.admin__content-listUser tr th {
+    text-transform: uppercase;
+}
+
+.admin__content-listUser tr td,
+.admin__content-listUser tr th {
+    padding: 0.8rem;
+
+}
+
+.admin__content-listUser tr th {
+    padding-right: 0px;
+}
+
+.thead__tr-product th,
+.tbody__tr-product td {
+    text-align: center;
+}
+
+.admin__content-listUser tbody tr:hover {
+    background-color: #5757bf;
+}
+
+
+/* info general */
+.admin__general {
+    flex: 0.9;
+    border-left: 1.8px solid #000;
+}
+
+.admin__general .admin__info-logo {
+    text-align: center;
+
+}
+
+.admin__general .admin__info-logo img {
+    border-radius: 50%;
+    border: 1px solid #000;
+    background-color: #ccc;
+    width: 130px;
+    height: 130px;
+}
+
+.admin__general .admin__info-logo span {
+    display: block;
+    font-size: 1.6rem;
+}
+
+.admin__general .admin__info-logo h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.admin__general .admin__general-info ul {
+    margin: 0.6rem 0 2rem 1.4rem;
+}
+
+.admin__general .admin__general-info ul li {
+    list-style-type: none;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    font-family: 800;
+}
+
+.admin__general .admin__general-info ul li span {
+    display: block;
+    margin-left: 2px;
+    font-size: 0.9rem;
+    color: rgb(89, 87, 87);
+}
+
+.admin__general .admin__general-info .edit-profile-btn {
+    padding: 0 1rem 1.2rem;
+    float: right;
+}
+
+.admin__general .admin__general-info button {
+    font-size: 1rem;
+    font-weight: 420;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 9px;
+    margin-top: 10px;
+    background-color: #ff5c2e;
+    cursor: pointer;
+}
+
+.admin__general .admin__general-info button:hover {
+    background-color: #f55225;
+    color: #fff;
+}
+
+body.dark .content-home_admin_list .container-home {
+    background-color: #28292a;
+}
+
+body.dark .admin__content h2,
+body.dark .admin__general h3 {
+    color: #eeeeee;
+}
+
+body.dark .product_info .product_info-img,
+body.dark .container-home .product_info {
+    background-color: var(--primary-color);
+}
+
+body.dark .admin__general-info ul li span {
+    color: #888888;
+}
+
+body.dark .admin__content thead,
+body.dark .admin__content tbody,
+body.dark .admin__general-info ul {
+    color: var(--text-color);
+}
+
+.edit-list i {
+    font-size: 2rem;
+    color: #00000094;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    width: 50px;
+    height: 50px;
+    padding: 0.5rem 0.6rem;
+}
+
+.edit-list i:hover {
+    background-color: #c5c5c5;
+    color: #000000ad;
+}
+
+.edit-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.edit-list h2 {
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.content-home_admin_hospital .edit-list h2 {
+    text-align: center;
+    margin: 20px 0 35px;
+    font-size: 30px;
+}
+
+
+
+.edit-list .btn-add {
+    border: none;
+    border-radius: 50%;
+}
+
+/* Phần thêm bệnh nhân */
+
+body.active {
+    overflow: hidden;
+}
+
+.screen.active {
+    background-color: rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+}
+
+.screenRelative.active {
+    background-color: rgba(255, 255, 255, 0.65);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20;
+}
+
+
+
+.container-add-patient {
+    width: 100%;
+    height: 100%;
+}
+
+.container-add-patient{
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 30px;
+    display: none;
+}
+.container-edit-manager,
+.container-add-manager {
+    padding: 10px;
+    background-color: #ffd7d7;
+    border: 1px solid #000;
+    border-radius: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.container-edit-manager{
+    height: 300px;
+    overflow-y: auto;
+}
+
+.container-edit-product{
+    height: 500px;
+}
+
+.container-edit-manager::-webkit-scrollbar{
+    display: none;
+}
+
+
+.container-add-patient.active,
+.container-edit-manager.active,
+.container-add-manager.active {
+    display: block;
+    z-index: 15;
+    margin-top: 20px;
+}
+
+.container-edit-hospital {
+    width: 420px;
+    height: 350px;
+}
+
+.container-edit-profile {
+    display: none;
+    width: 600px;
+    height: 600px;
+    padding: 10px;
+    background-color: #ccc;
+    border: 1px solid rgb(167, 167, 167);
+    border-radius: 30px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--bg1);
+}
+
+.container-edit-profile.active {
+    display: block !important;
+    z-index: 35;
+}
+
+@media (min-height: 620px) {
+    .container-edit-profile {
+        overflow-y: auto;
+    }
+}
+
+
+.container-edit-profile .edit-profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    margin-bottom: 20px;
+
+}
+
+.container-edit-profile .edit-profile-header button {
+    width: 35px;
+    height: 35px;
+    font-size: 1.8rem;
+    font-weight: 420;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ff5c2e;
+}
+
+.container-edit-profile .edit-profile-header button:hover {
+    background-color: #f55225;
+    color: #fff;
+}
+
+.container-edit-profile .edit-profile-header h2 {
+    font-size: 1.5rem;
+    margin: 0 10px;
+}
+
+/*=====================*/
+
+/*=====================*/
+
+
+.container-edit-manager .edit-manager-header,
+.container-add-manager .add-manager-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-edit-manager .edit-manager-header button,
+.container-add-manager .add-manager-header button {
+    width: 35px;
+    height: 35px;
+    font-size: 1.8rem;
+    font-weight: 420;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #bdd5ff;
+}
+
+.container-edit-manager .edit-manager-header button:hover,
+.container-add-manager .add-manager-header button:hover {
+    background-color: #a7c7ff;
+    color: #fff;
+}
+
+.container-edit-manager .edit-manager-header button:active,
+.container-add-manager .add-manager-header button:active {
+    background-color: #8eb7ff;
+    color: #fff;
+}
+
+.container-edit-manager .edit-manager-header h2,
+.container-add-manager .add-manager-header h2 {
+    font-size: 1.5rem;
+    margin: 0 10px 10px;
+}
+
+.row-top {
+    text-align: center;
+}
+
+.row-top img {
+    width: 120px;
+    height: 120px;
+}
+
+/*Hình user*/
+.container-add-manager .row-top {
+    margin: 0px calc(50% - 90px);
+    text-align: center;
+    position: relative;
+}
+
+.container-add-manager .row-top img {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+}
+
+.container-add-hospitals {
+    width: 450px;
+}
+
+#file {
+    display: none;
+}
+
+#uploadBtn {
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: wheat;
+    line-height: 180px;
+    font-family: sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#file_1 {
+    display: none;
+}
+
+#uploadBtn_1 {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 1px solid #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: wheat;
+    line-height: 180px;
+    font-family: sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+.row-bottom {
+    flex: 0 0 60%;
+}
+
+.content-row-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.contentAddProduct{
+    height: 380px;
+}
+
+.content-row-bottom::-webkit-scrollbar {
+    display: none;
+}
+
+
+.content-row-bottom-patient {
+    height: 400px
+}
+
+.noScroll {
+    overflow-y: visible;
+    display: block;
+    height: 180px;
+
+}
+
+.content-row-bottom .status,
+.content-row-bottom .content-info {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-info select {
+    font-size: 15px;
+    height: 26px;
+    width: 100%;
+    font-size: 16px;
+    color: rgb(90, 90, 90);
+    border: 1px solid #ccd0d5;
+    border-radius: 5px;
+}
+
+.content-row-bottom .content-cmnd,
+.content-row-bottom .status .content-status {
+    flex: 0 0 40%;
+}
+
+.content-row-bottom .content-name,
+.content-row-bottom .status .content-relatively {
+    flex: 0 0 59%;
+}
+
+.content-row-bottom .space {
+    margin-bottom: 13px;
+    padding: 0 12px;
+}
+
+
+
+.content-row-bottom .spaceManager {
+    margin-bottom: 5px;
+    padding: 0 12px;
+    font-size: 21px;
+    font-weight: bold;
+    color: blue;
+}
+
+.content-row-bottom .spaceHospital {
+    margin-bottom: 12px;
+    padding: 0 12px;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.content-row-bottom .spaceHopitals {
+    flex: none;
+}
+
+.content-row-bottom .spaceManager input {
+    font-size: 15px;
+}
+
+.content-row-bottom input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.content-row-bottom p {
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.row-bottom .content-row-bottom button {
+    width: 28%;
+    font-size: 1.1rem;
+    font-weight: 420;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    align-self: center;
+    padding: 9px;
+    margin-top: 15px;
+    background-color: #bdd5ff;
+    cursor: pointer;
+}
+
+.row-bottom .content-row-bottom .register_manager {
+    margin-top: 0px;
+}
+
+.row-bottom .content-row-bottom .btn_addHospital {
+    width: 39%;
+}
+
+.row-bottom .content-row-bottom .edit_manager {
+    display: flex;
+    justify-content: center;
+}
+
+.row-bottom .content-row-bottom button:hover {
+    background-color: #a2c4ff;
+    color: #fff;
+}
+
+.row-bottom .content-row-bottom button:active {
+    background-color: #7cacff;
+    color: #fff;
+}
+
+.content-home_admin_list tbody {
+    max-height: 500px;
+}
+
+.content-home_admin_hospital tbody {
+    max-height: 400px;
+}
+
+.thead_Admin_list th:nth-child(1) {
+    width: 1%;
+}
+
+.thead_Admin_list th:nth-child(2) {
+    width: 2%;
+}
+
+.thead_Admin_list th:nth-child(3) {
+    width: 3%;
+}
+
+.thead_Admin_list th:nth-child(4) {
+    width: 2%;
+}
+
+.thead_Admin_list th:nth-child(5) {
+    width: 1%;
+}
+
+.thead_Admin_list th:nth-child(6) {
+    width: 5%;
+}
+
+.td_Admin .td_PatientSTT {
+    width: 5%;
+}
+
+.td_Admin .td_ManagerSTT {
+    width: 5%;
+}
+
+.td_Admin .td_PatientStatus {
+    width: 13%;
+}
+
+.td_Admin .td_ManagerStatus {
+    width: 11%;
+}
+
+
+.td_Admin .td_PatientName,
+.td_Admin .td_PatientAddress {
+    width: 16%;
+}
+
+.td_Admin .td_ManagerName,
+.td_Admin .td_ManagerAddress {
+    width: 11%;
+}
+
+.td_Admin .td_Edit {
+    width: 11%;
+}
+
+.td_Admin .td_History {
+    width: 8%;
+}
+
+.td_Admin .td_Lock {
+    width: 6%;
+}
+
+.td_Admin .td_PatientCMND,
+.td_Admin .td_PatientDate {
+    width: 13%;
+}
+
+.td_Admin .td_ManagerCMND,
+.td_Admin .td_ManagerDate {
+    width: 12%;
+}
+
+.td_Admin .td_HospitalSTT {
+    width: 4%;
+}
+
+.td_Admin .td_HospitalName {
+    width: 20%;
+}
+
+.td_Admin .td_HospitalAddress {
+    width: 19%;
+}
+
+.td_Admin .td_HospitalAmount,
+.td_Admin .td_HospitalDate {
+    width: 15%;
+}
+
+/* .thead_Admin_hospital{
+    width: 85%;
+} */
+
+.thead_Admin_hospital th:first-child {
+    width: 1%;
+}
+
+.thead_Admin_hospital th:nth-child(2) {
+    width: 4%;
+}
+
+.thead_Admin_hospital th:nth-child(3) {
+    width: 6%;
+}
+
+.thead_Admin_hospital th:nth-child(4) {
+    width: 2%;
+}
+
+.thead_Admin_hospital th:nth-child(5) {
+    width: 7%;
+}
+
+.thead_Admin_hospital th:nth-child(6),
+.thead_Admin_hospital th:nth-child(7) {
+    width: 2%;
+}
+
+
+.content-home_admin_hospital .td_Admin button {
+    background-color: #ffd7d7;
+    color: #000;
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.content-home_admin_hospital .td_Admin button:hover {
+    background-color: #ff9d9d;
+}
+
+.content-home_admin_hospital .td_Admin button:active {
+    background-color: #ff6d6d;
+}
+
+.content-home_admin_hospital .add_hospital {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.content-home_admin_hospital .add_hospital button {
+    margin-top: 1rem;
+    margin-right: 1rem;
+    background-color: #ffa4a4;
+    border: none;
+    border-radius: 5%;
+    font-size: 1rem;
+    font-weight: 420;
+    padding: 9px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.content-home_admin_hospital .add_hospital button:hover {
+    background-color: #ff7676;
+    color: #fff;
+}
+
+.spaceManager .uil {
+    float: right;
+    transform: translate(-10px, -35px);
+}
+
+.content-row-bottom .error_acc {
+    text-align: center;
+    color: red;
+    transform: translateY(-31px);
+}
+
+#hospitalSelect1,
+#hospitalSelect2 {
+    margin-top: 10px;
+    margin-left: 5px;
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.content-add-hospital {
+    height: 255px;
+}
+
+.delete_Hospital_btn {
+    transform: translateX(-50px);
+}
+
+.td_History{
+    transform: translateX(-10px);
+} 
+.td_Lock {
+    transform: translateX(10px);
+}
+
+.td_Edit{
+    transform: translateX(35px);
+}
+
+.registerPatient .editPatientList{
+    float: right;
+    width: 40px;
+    height: 40px;
+    background: #fafafa;
+    box-shadow: var(--boxShadow);
+    border: 1px solid #000;
+    border: none;
+    border-radius: 15px;
+    transform: translate(16px,-78px);
+    font-size: 23px;
+    font-weight: 600;
+    background: var(--bg1);
+    outline: none;
+    cursor: pointer;
+    box-shadow: var(--boxShadow3);
+}
+
+tbody tr td .update_btn1{
+    font-size: 1rem;
+    font-weight: 420;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 9px;
+    margin-top: 10px;
+    background-color: #ff5c2e;
+    cursor: pointer;
+}
+
+table thead .throng{
+    width: 20%;
+}

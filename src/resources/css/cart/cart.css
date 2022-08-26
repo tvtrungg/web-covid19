@@ -1,0 +1,143 @@
+
+
+/* cart */
+
+.cart {
+    position: absolute; 
+    z-index: 100;
+    top: 0;
+    right: -27.7%;
+    width: 360px;
+    min-height: 100vh;
+    padding: 20px;
+    background: var(--sidebar-color);
+    box-shadow: -2px 0 4px hsl(2 4% 15% / 10%);
+    transition: 0.3s;
+}
+
+.cart .pay-icon{
+    transform: translateX(-224%);
+}
+
+.cart.activeIcon {
+    right: 0;
+}
+
+.cart.activeIcon .pay-icon{
+    transform: translateX(0%);
+}
+
+.cart-title {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+body.dark .cart-title{
+    color: #fff;
+}
+
+.cart-box {
+    
+    display: grid;
+    grid-template-columns: 32% 50% 18%;
+    align-items: center;
+    gap: 1;
+    margin-top: 1rem;
+}
+
+.cart-box img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    padding: 10px;
+
+}
+
+.detail-box {
+    display: grid;
+    row-gap: 0.5rem;
+}
+
+.cart__product-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.cart-price {
+    font-family: 600;
+}
+
+.cart-quantity {
+    border: 1px solid var(--text--color);
+    outline-color: var(--primary-color);
+    width: 2.4rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.cart-remove {
+    font-size: 20px;
+    color: var(--primary-color);
+    cursor: pointer;
+}
+
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid var(--color);
+}
+
+body.dark .total{
+   color: #fff;
+}
+
+.total-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.total-price {
+    margin-left: 0.5rem;
+}
+
+.btn-buy {
+    width: 40%;
+    margin: 1.5rem auto 0 auto;
+    padding: 12px 20px;
+    border: none;
+    background: #ccc;
+    color: var(--color);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+body.dark .btn-buy{
+    color: #fff;
+    background-color: #474747;
+}
+
+body.dark .btn-buy:hover{
+    color: #fff;
+    background-color: #3a3a3a;
+}
+
+.btn-buy:hover {
+    background: var(--primary-color);
+}
+
+#close-cart {
+    position: absolute;
+    top: 1rem;
+    right: 0.8rem;
+    font-size: 2rem;
+    color: var(--text--color);
+    cursor: pointer;
+}
+
+body.dark #close-cart{
+    color: #fff;
+}

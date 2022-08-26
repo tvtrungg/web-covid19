@@ -1,0 +1,349 @@
+<div class="home">
+    <div class="header-home">
+        <div class="text">Nhu yếu phẩm</div>
+
+        <div class="header-home-content">
+            <form class="home-search" action="/manager/{{user._id}}/search" method="GET">
+                <input name="name" id="searchtext" type="search" placeholder="What are you looking for?" autocomplete="off">
+                <input name="type" type="text" style="display:none" value="product">
+                <button type="submit" id="search_btn"><i class='bx bx-search icon'></i></button>
+            </form>
+
+            <div class="account">
+                <div class="account-img">
+                    <img src="/img/manager.png" alt="manager">
+                </div>
+                <div class="account-text">
+                    <p class="account-name">{{user.name}}</p>
+                    <p style="font-size: 14px;float: left;opacity: 0.6;margin-right: 5px;">Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-home">
+        <div class="tm-main">
+            <!-- Gallery section -->
+            <div class="tm-section-wrap">
+                <section id="gallery" class="tm-section">
+                    <div class="home-header-text">
+                        <p>Danh sách sản phẩm</p>
+                    </div>
+
+                    <ul class="tm-gallery-links">
+                        <div class="options-items">
+                            <!-- filer_button -->
+                            <li id="shoppingAll" class="active" onclick="changeColor('shoppingAll')">
+                                <a href="/manager/{{user._id}}/editproduct/1" class="active tm-gallery-link filter"
+                                    data-filter="all">
+                                    <i class='bx bx-home-alt icon'></i>
+                                    <i class="fas fa-layer-group tm-gallery-link-icon"></i>
+                                    All
+                                </a>
+                            </li>
+                            <li id="shoppingFood" onclick="changeColor('shoppingFood')">
+                                <a href="/manager/{{user._id}}/editproduct/1/?type=food" class="tm-gallery-link filter"
+                                    data-filter="food">
+                                    FOOD
+                                </a>
+                            </li>
+                            <li id="shoppingDrinks" onclick="changeColor('shoppingDrinks')">
+                                <a href="/manager/{{user._id}}/editproduct/1?type=drinks" class="tm-gallery-link filter"
+                                    data-filter="drinks">
+                                    Drinks
+                                </a>
+                            </li>
+                            <li id="shoppingEssentials" onclick="changeColor('shoppingEssentials')">
+                                <a href="/manager/{{user._id}}/editproduct/1?type=essentials"
+                                    class="tm-gallery-link filter" data-filter="essentials">
+                                    Essentials
+                                </a>
+                            </li>
+                        </div>
+                        <script>
+                            function Change() {
+                                var url = window.location.href;
+                                var type;
+                                var queryURL = new URL(url);
+                                var order = document.getElementById("sortOption").value;
+                                if (queryURL.searchParams.get("type") != 'undefined' && queryURL.searchParams.get("type") != 'null') {
+                                    type = queryURL.searchParams.get("type");
+                                    location.href = location.protocol + '//' + location.host + location.pathname + '?order=' + order;
+                                } else {
+                                    location.href = location.protocol + '//' + location.host + location.pathname + '?type=' + type + '&order=' + order;
+                                }
+                            }
+
+                        </script>
+                        <div class="sort-items">
+                            <div class="home-header-select_1">
+                                <i class='bx bx-sort icon'></i>
+                                <select name="" id="sortOption" onchange="Change()">
+                                    <option value="default">Select an order</option>
+                                    <option id="nameincrease" value="nameincrease" onselect="Change()"
+                                        onchange="Change()">Name Increasing</option>
+                                    <option id="priceincrease" value="priceincrease" onselect="Change()"
+                                        onchange="Change()">Price Increasing</option>
+                                    <option id="namedecrease" value="namedecrease" onselect="Change()"
+                                        onchange="Change()">Name Decreasing</option>
+                                    <option id="pricedecrease" value="pricedecrease" onselect="Change()"
+                                        onchange="Change()">Price Decreasing</option>
+                                </select>
+                            </div>
+                            <div class="add_product">
+                                <button class="btn-add">Thêm sản phẩm</button>
+                            </div>
+                        </div>
+
+                    </ul>
+                    <div class="CreditCharge" style="display:none">{{user.credit}}</div>
+                    <div id="list" class="tm-gallery layout_items">
+                        {{#each item}}
+
+                        <div class="tm-gallery-item">
+                            <input class="IdProduct" name="IdProduct" style="display:none" value="{{_id}}">
+                            <div class="product_info" data-item={{type}} style="display: block;">
+                                <div class="product_info-img">
+                                    <div class="image_collection">
+                                        <img class="image1" src="/img/Neccessities/{{type}}/{{image}}" alt="{{name}}">
+                                        <img src="/img/Neccessities/{{type}}/{{image1}}" alt="{{name}}">
+                                        <img src="/img/Neccessities/{{type}}/{{image2}}" alt="{{name}}">
+                                    </div>
+                                </div>
+                                <div class="info">
+
+                                    <div class="idItem" style="display:none">{{_id}}</div>
+                                    <p class="name_package">{{name}}</p>
+                                    <div class="info_content">
+                                        <div class="amount_content">
+                                            <p class="amount-text">Số lượng còn: </p>
+                                            <p class="amount">{{amount}}</p>
+                                        </div>
+                                        <p class="price_text">Giá:</p>
+                                        <p class="price">{{price}} VNĐ</p>
+                                    </div>
+                                    <div class="info_button" id="{{id}}">
+                                        <button class="buy-button update_btn1">
+                                            <i class='bx bx-edit'></i>
+                                            Chỉnh sửa
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                    <script>
+                        function paging(id, page, totalpage, gap) {
+                            var container = document.getElementById(id);
+                            var result = '';
+                            if (page - gap > 1)
+                                result += '<a href="1">' + '<button class="button_First">' + 'First' + '</button>' + '</a>';
+
+                            for (var i = page - gap; i < page; i++)
+                                if (i > 0)
+                                    result += '<a href="' + i + '">' + '<button>' + i + '</button>' + '</a>';
+
+                            result += '<button class="pageCurrent">' + page + '</button>';
+
+                            for (var i = page + 1; i <= page + gap; i++)
+                                if (i <= totalpage)
+                                    result += '<a href="' + i + '">' + '<button>' + i + '</button>' + '</a>';
+
+                            if (page + gap < totalpage)
+                                result += '<a href="' + totalpage + '">' + '<button class="button_Last">' + 'Last' + '</button>' + '</a>';
+
+                            container.innerHTML = result;
+                        }
+                    </script>
+                    <div id="pagination" class="tm-paging">
+                        <script>
+                            paging("pagination", {{ page }}, Math.ceil({{ itemcount }}/12), 2);
+                        </script>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="screen"></div>
+
+<div class="container-edit-manager container-edit-product">
+    <div class="edit-manager-header">
+        <h2>Chỉnh sửa</h2>
+        <button class="close-edit-manager"><i class='bx bx-x icon'></i></button>
+    </div>
+    <div class="row-bottom">
+        <form class="content-row-bottom noScroll" action="/manager/edit_Product" method="POST">
+            <input class="inputIdProduct" name="IdProduct" style="display:none" value="1">
+            <div class="column-left-img">
+                <img src="/img/upload.png" id="photo">
+                <input name="imageEdit" type="file" id="file" multiple />
+                <label for="file" class="uploadBtn" id="uploadBtn">Choose Photo</label>
+            </div>
+            <div class="content-info">
+                <div class="spaceManager content-name">
+                    <p>Tên món</p>
+                    <input name="nameEdit" type="text" placeholder="Tên món" required>
+                </div>
+                <div class="spaceManager content-cmnd">
+                    <p>Số lượng còn</p>
+                    <input name="amountEdit" type="text" placeholder="Số lượng" required>
+                </div>
+            </div>
+            <div class="spaceManager content-name">
+                <p>Giá tiền</p>
+                <input name="priceEdit" type="number" placeholder="Giá tiền" required>
+            </div>
+
+            <div class="edit_manager">
+                <button class="editPateint-btn" type="submit">Chỉnh sửa</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div class="container-add-manager">
+    <div class="add-manager-header">
+        <h2>Thêm sản phẩm mới</h2>
+        <button class="close-add-manager"><i class='bx bx-x icon'></i></button>
+    </div>
+
+    <div class="row-bottom">
+        <form class="content-row-bottom contentAddProduct" action="/manager/addProduct" method="POST">
+            <div class="column-left-img column-left-img1">
+                <img src="/img/upload.png" id="photo_1">
+                <input name="imageAdd" type="file" id="file_1" multiple />
+                <label for="file_1" class="uploadBtn1" id="uploadBtn_1">Choose Photo</label>
+            </div>
+            <div class="content-info">
+                <div class="spaceManager content-name">
+                    <input name="nameAdd" type="text" placeholder="Tên sản phẩm" required>
+                </div>
+                <div class="spaceManager content-cmnd">
+                    <select name="typeAdd" id="">
+                        <option value="food">Food</option>
+                        <option value="drinks">Drink</option>
+                        <option value="essentials">Essential</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="content-info">
+                <div class="spaceManager content-name">
+                    <input name="amountAdd" type="number" placeholder="Số lượng" required>
+                </div>
+                <div class="spaceManager content-cmnd">
+                    <input name="priceAdd" type="number" placeholder="Giá" required>
+                </div>
+            </div>
+            <button type="submit" class="register_manager">Thêm</button>
+        </form>
+    </div>
+</div>
+
+<script>
+
+    const tag_a = document.querySelectorAll(".tm-gallery-links .options-items > li > a"),
+        buttonAdd = document.querySelector('.btn-add'),
+        buttonCloseAdd = document.querySelector('.close-add-manager'),
+        add_manager = document.querySelector('.container-add-manager'),
+
+
+        buttonCloseEdit = document.querySelector('.close-edit-manager'),
+        edit_manager = document.querySelector('.container-edit-manager'),
+        display_screen = document.querySelector('.screen'),
+        body_display = document.querySelector('body'),
+        IdProduct = document.querySelector('.IdProduct'),
+        inputIdProduct = document.querySelector('.inputIdProduct');
+
+    tag_a.forEach(a => {
+        a.parentElement.classList.remove('active');
+        if (window.location.href == a.href) {
+            a.parentElement.classList.add('active');
+        } else {
+            a.parentElement.classList.remove('active');
+        }
+    });
+
+    $(document).ready(function () {
+        Slick();
+    });
+
+    function Slick() {
+        $('.image_collection').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            prevArrow: `<button type='button' class='slick-prev slick-arrow'><i class='bx bx-chevron-left icon'></i></button>`,
+            nextArrow: `<button type='button' class='slick-next slick-arrow'><i class='bx bx-chevron-right icon'></i></button>`,
+            dots: true,
+        });
+    };
+
+    $('.update_btn1').click(function () {
+        edit_manager.classList.add("active");
+        display_screen.classList.add("active");
+        body_display.classList.add("active");
+        var id = $(this).parent().parent().parent().parent().find('.IdProduct').val();
+        var name = $(this).parent().parent().find('.name_package').text();
+        var amount = $(this).parent().parent().find('.amount').text();
+        var price = $(this).parent().parent().find('.price').text();
+
+        $('.inputIdProduct').val(id);
+        $('input[name="nameEdit"]').val(name);
+        $('input[name="amountEdit"]').val(amount);
+        $('input[name="priceEdit"]').val(price.split(' ', 1));
+    });
+
+    buttonCloseEdit.addEventListener("click", () => {
+        edit_manager.classList.remove("active");
+        display_screen.classList.remove("active");
+        body_display.classList.remove("active");
+
+    });
+
+
+    buttonAdd.addEventListener("click", () => {
+        add_manager.classList.add("active");
+        display_screen.classList.add("active");
+        body_display.classList.add("active");
+
+    });
+
+
+    buttonCloseAdd.addEventListener("click", () => {
+        add_manager.classList.remove("active");
+        display_screen.classList.remove("active");
+        body_display.classList.remove("active");
+
+    });
+
+    const imgDiv1 = document.querySelector('.column-left-img1'),
+        img1 = document.querySelector('#photo_1'),
+        file_1 = document.querySelector('#file_1'),
+        uploadBtn1 = document.querySelector('#uploadBtn_1');
+
+    imgDiv1.addEventListener('mouseenter', function () {
+        uploadBtn1.style.display = "block";
+    });
+
+    imgDiv1.addEventListener('mouseleave', function () {
+        uploadBtn1.style.display = "none";
+    });
+
+
+    file_1.addEventListener('change', function () {
+        const newImage = this.files[0];
+        if (newImage) {
+            const fileReader = new FileReader(); //FileReader is a predefined function of JS
+
+            fileReader.addEventListener('load', function () {
+                img1.setAttribute('src', fileReader.result);
+            });
+            fileReader.readAsDataURL(newImage);
+        }
+    });
+
+</script>

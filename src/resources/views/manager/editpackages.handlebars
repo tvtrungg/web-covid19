@@ -1,0 +1,106 @@
+<div class="home">
+    <div class="header-home">
+        <div class="text">Gói sản phẩm</div>
+
+        <div class="header-home-content">
+            <form class="home-search" action="/manager/{{user._id}}/search" method="GET">
+                <input name="name" id="searchtext" onkeyup="myFunction()" type="search"
+                    placeholder="What are you looking for?" autocomplete="off">
+                <button type="submit" id="search_btn"><i class='bx bx-search icon'></i></button>
+            </form>
+
+            <div class="account">
+                <div class="account-img">
+                    <img src="/img/manager.png" alt="manager">
+                </div>
+                <div class="account-text">
+                    <p class="account-name">{{user.name}}</p>
+                    <p style="font-size: 14px;float: left;opacity: 0.6;margin-right: 5px;">Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-home">
+        <div class="tm-section-wrap">
+            <div class="home-header-text">
+                <p>Danh sách các gói sản phẩm</p>
+            </div>
+
+            <div class="sort-package">
+                <script>
+                    function Change() {
+                        var url = window.location.href;
+                        var type;
+                        var queryURL = new URL(url);
+                        var order = document.getElementById("sortOption").value;
+                        if (queryURL.searchParams.get("type") != 'undefined' && queryURL.searchParams.get("type") != 'null') {
+                            type = queryURL.searchParams.get("type");
+                            location.href = location.protocol + '//' + location.host + location.pathname + '?order=' + order;
+                        } else {
+                            location.href = location.protocol + '//' + location.host + location.pathname + '?type=' + type + '&order=' + order;
+                        }
+                        console.log('This is a typeof : ', typeof (type))
+                    }
+
+                </script>
+                <div class="sort-items">
+                    <div class="home-header-select_1">
+                        <i class='bx bx-sort icon'></i>
+                        <select name="" id="sortOption" onchange="Change()">
+                            <option value="default">Select an order</option>
+                            <option id="nameincrease" value="nameincrease" onselect="Change()" onchange="Change()">Name
+                                Increasing</option>
+                            <option id="priceincrease" value="priceincrease" onselect="Change()" onchange="Change()">
+                                Price Increasing</option>
+                            <option id="namedecrease" value="namedecrease" onselect="Change()" onchange="Change()">Name
+                                Decreasing</option>
+                            <option id="pricedecrease" value="pricedecrease" onselect="Change()" onchange="Change()">
+                                Price Decreasing</option>
+                        </select>
+                    </div>
+
+                </div>
+            </div>
+            <div id="container-home">
+                <div id="list" class="tm-gallery layout_items">
+                    {{#each packages}}
+                    <div class="tm-gallery-item">
+                        <div class="product_info" data-item={{type}} style="display: block;">
+                            <div class="product_info-img">
+                                <div class="image_collection">
+                                    <a href="package/{{_id}}"><img class="image1" src="/img/Package/{{image}}"
+                                            alt="{{name}}"></a>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="idItem" style="display:none">{{_id}}</div>
+                                <p class="name_package">{{name}}</p>
+                                <div class="info_content">
+                                    <p class="limit">Giới hạn <b>{{limit}} </b> gói/{{time}}</p>
+                                    <div class="amount_content">
+                                        <p class="amount-text">Số lượng còn: </p>
+                                        <p class="amount">{{amount}}</p>
+                                    </div>
+                                    <p class="price_text">Giá:</p>
+                                    <p class="price priceMain">{{price}} VNĐ</p>
+                                </div>
+                                <div class="info_button">
+                                    <a href="/manager/deletePackage/{{_id}}">
+                                        <button class="buy-button">
+                                            <i class='bx bx-trash'></i>
+                                            Xóa
+                                        </button>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

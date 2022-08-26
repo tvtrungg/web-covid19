@@ -1,0 +1,127 @@
+<div class="home">
+    <div class="header-home">
+        <div class="text">Quản lý</div>
+
+        <div class="header-home-content">
+            <form class="home-search" action="/manager/{{user._id}}/search" method="GET">
+                <input name="name" id="searchtext" onkeyup="myFunction()" type="search"
+                    placeholder="What are you looking for?" autocomplete="off">
+                <button type="submit" id="search_btn"><i class='bx bx-search icon'></i></button>
+            </form>
+
+            <div class="account">
+                <div class="account-img">
+                    <img src="/img/manager.png" alt="manager">
+                </div>
+                <div class="account-text">
+                    <p class="account-name">{{user.name}}</p>
+                    <p style="font-size: 14px;float: left;opacity: 0.6;margin-right: 5px;">Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-home">
+        <div class="content-home_admin_list">
+            <div class="container-home">
+                <div class="admin__info admin__content">
+                    <table class="admin__content-listUser myTable">
+                        <div class="edit-list">
+                            <h2>DANH SÁCH BỆNH NHÂN</h2>
+                            <button class="btn-add"><i class='bx bx-edit icon'></i></button>
+
+                        </div>
+                        <thead>
+                            <tr class="thead_Admin">
+                                <th style="width: 8%;">Stt</th>
+                                <th>Họ tên</th>
+                                <th>CMND</th>
+                                <th>Địa chỉ</th>
+                                <th>Tình trạng</th>
+                                <th style="width: 21%;" class="throng"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="myTable">
+                            {{#each users}}
+                            <div>
+                                <tr class="td_Admin"
+                                    onclick="displayInfo('{{surName}}','{{name}}', '{{cmnd}}', '{{birthday_day}}', '{{birthday_month}}', '{{birthday_year}}', '{{address}}', '{{statusCovid}}','{{treatmentAddress}}')">
+                                    <td class="idPatient" style="display:none">{{_id}}</td>
+                                    <td style="width: 6%;" class="td_PatientSTT">{{@index}}</td>
+                                    <td class="td_PatientName">{{surName}} {{name}} </td>
+                                    <td style="width: 12%;" class="td_PatientCMND">{{cmnd}}</td>
+                                    <td class="td_PatientAddress">{{address}} </td>
+                                    <td class="td_PatientStatus">{{AccountBalance}}</td>
+                                    <td style="width: 22% !important;">
+                                        <a href="/manager/notification/{{_id}}"><button class="update_btn1">Thông báo</button></a>
+                                    </td>
+                                </tr>
+                            </div>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="admin__info admin__general">
+                    <div class="admin__info-logo">
+                        <h3>Thông tin tổng quát</h3>
+                        <img src="/img/user.png" alt="user">
+                    </div>
+                    <div class="admin__general-info">
+                        <ul>
+                            <li style="display: none;">STT:<span></span></li>
+
+                            <li>Họ tên :
+                                <span style="display: block;" id="sidebarName"></span>
+                            </li>
+
+                            <li>CMND :
+                                <span style="display: block;" id="sidebarId"></span>
+                            </li>
+
+                            <li>Ngày sinh :
+                                <span style="display: block;" id="sidebarBirth"></span>
+                            </li>
+                            <li>
+                                Địa chỉ :
+                                <span style="display: block;" id="sidebarAddress"></span>
+                            </li>
+                            <li>
+                                Tình trạng :
+                                <span style="display: block;" id="sidebarStatus"></span>
+                            </li>
+                            <li>
+                                Địa chỉ điều trị :
+                                <span style="display: block;" id="sidebarTA"></span>
+                            </li>
+
+                            <li>
+                                <div class="space right_treatment_address">
+                                    <h3>Danh sách người liên quan</h3>
+                                    <table>
+                                        <thead>
+                                            <th>STT</th>
+                                            <th>Họ tên</th>
+                                            <th>CMND</th>
+                                            <th>Trạng thái</th>
+                                        </thead>
+                                        <tbody>
+                                            {{#each user.listRelative}}
+                                            <tr>
+                                                <td>{{@index}}</td>
+                                                <td>{{name}}</td>
+                                                <td>{{cmnd}}</td>
+                                                <td>{{status}}</td>
+                                            </tr>
+                                            {{/each}}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

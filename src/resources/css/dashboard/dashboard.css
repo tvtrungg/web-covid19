@@ -1,0 +1,289 @@
+.content-home{
+    padding: 10px;
+}
+
+.content-home h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.content-home .content-selection{
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    margin-left: 50px;
+}
+.content-home #content-date {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.content-selection select {
+    font-size: 1em;
+    border: 2px solid #000;
+    border-radius: 5px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9 );
+    cursor: pointer;    
+}
+
+/*Thống kê dịch bệnh VN và Thế giới*/
+.content-home .content-status {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.content-status .infection,
+.content-status .recover,
+.content-status .dead {
+    padding: 5px;
+    border-radius: 10px;
+    flex-basis: 31%;
+    text-align: center;
+    box-shadow: rgb(0 0 0 / 30%) 0px 8px 32px -12px;
+}
+
+.content-status .infection {
+    border-left: 10px solid rgba(255, 0, 0, 0.5);
+}
+
+.content-status .recover {
+    border-left: 10px solid rgba(0, 255, 0, 0.5);
+}
+
+.content-status .dead {
+    border-left: 10px solid rgba(0, 0, 255, 0.5);
+}
+
+.content-status .title {
+    font-size: 20px;
+    opacity: 0.5;
+}
+
+.content-status .amount-covid {
+    margin-top: 7px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.content-status .volatility_infection,
+.content-status .volatility_recover,
+.content-status .volatility_dead {
+    font-size: 18px;
+    opacity: 0.8;
+
+}
+
+/*Biểu đồ*/
+.content-home .content-chart {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+    /* height: 720px;
+    width: 721px; */
+}
+
+.content-chart .histogram-chart {
+    flex-basis: 64%;
+    background-color: white;
+    height: 500px;
+    text-align: center;
+    
+    padding: 20px;
+    /* width: 721px;
+    height: 800px; */
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08 );
+    border-radius: 20px;
+}
+
+.content-chart .pie-chart {
+    flex-basis: 31%;
+    background-color: aliceblue;
+    height: 500px;
+    text-align: center;
+    padding: 20px;
+    /* width: 721px;
+    height: 800px; */
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08 );
+    border-radius: 20px;
+}
+
+/*Danh sách các tỉnh*/
+
+.home .content-home {
+    min-height: 100vh;
+    margin: 20px 30px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+
+
+body.dark .content-home {
+    background-color: #28292a;
+}
+
+.List_of_provinces {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-self: stretch;
+    flex-flow: row wrap;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.sidebar.close~.home {
+    left: 78px;
+    height: 100vh;
+    width: calc(100% - 78px);
+}
+
+body.dark .home .text {
+    color: var(--text-color);
+}
+
+.admin__content {
+    flex: 3;
+    margin: 1rem;
+}
+
+.admin__content h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin: 2rem 0;
+    font-family: sans-serif;
+}
+
+.admin__content .admin__content-covid {
+    min-width: 100%;
+    border-collapse: collapse;
+}
+
+.admin__content .admin__content-covid thead {
+    font-size: 1.2rem;
+}
+
+.admin__content .admin__content-covid tbody {
+    border-top: 1px solid blue;
+    font-size: 1rem;
+}
+
+.admin__content-covid tbody tr {
+    border-top: solid 1px rgb(20, 18, 18);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.admin__content-covid tr:first-child {
+    border-top: none
+}
+
+.admin__content-covid tr:last-child {
+    border-bottom: solid 1px rgb(20, 18, 18);
+}
+
+.admin__content-covid tr th {
+    text-transform: uppercase;
+}
+
+.admin__content-covid tr td,
+.admin__content-covid tr th {
+    padding: 0.6rem;
+    font-family: system-ui, 'Helvetica Neue', sans-serif;
+}
+
+.tbody__tr-covid th,
+.tbody__tr-covid td {
+    text-align: center;
+}
+
+.admin__content-covid tbody tr:hover {
+    background-color: #d9d5ff;
+}
+
+tbody .amount_cases{
+    font-size: 19px;
+    font-weight: 500;
+    padding-top: 12px;
+}
+
+tbody tr .size_stt {
+    font-size: 17px;
+}
+
+tbody tr .province_name {
+    font-size: 18px;
+}
+
+tbody td .amount_plus{
+    font-size: 17px;
+    font-weight: 500;
+    margin-left: 32px;
+}
+
+.content-status .volatility_infection,
+tbody td .infection-plus{
+    color: red;
+}
+
+.content-status .volatility_recover,
+tbody td .recover-plus{
+    color: #8ACA2B;
+}
+
+.content-status .volatility_dead,
+tbody td .dead-plus{
+    color: #718096;
+}
+
+
+
+
+
+body.dark .content-home .List_of_provinces {
+    background-color: #28292a;
+}
+
+body.dark .admin__content h2,
+body.dark .admin__general h3 {
+    color: #eeeeee;
+}
+
+body.dark .product_info .product_info-img,
+body.dark .List_of_provinces .product_info {
+    background-color: var(--primary-color);
+}
+
+body.dark .admin__general-info ul li span {
+    color: #888888;
+}
+
+body.dark .admin__content thead,
+body.dark .admin__content tbody,
+body.dark .admin__general-info ul {
+    color: var(--text-color);
+}
+
+
+body.dark .info .amount-text,
+body.dark .info .amount,
+body.dark .info .limit,
+body.dark .info .name_package,
+body.dark .home .text {
+    color: #979797;
+}
+
+
+.content-chart .histogram-chart .box{
+    background: #222;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08 );
+    border-radius: 20px;
+}
+

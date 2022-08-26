@@ -1,0 +1,65 @@
+<div class="home">
+    <div class="header-home">
+        <div class="text">Gói sản phẩm</div>
+
+        <div class="header-home-content">
+            <div class="home-search">
+                <input id="searchtext" type="search" placeholder="What are you looking for?">
+                <button id="search_btn"><i class='bx bx-search icon'></i></button>
+            </div>
+
+            <div class="account">
+                <div class="account-img">
+                    <img src="/img/manager.png" alt="manager">
+                </div>
+                <div class="account-text">
+                    <p class="account-name">{{user.name}}</p>
+                    <p style="font-size: 14px;float: left;opacity: 0.6;margin-right: 5px;">Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-home">
+        <h1>Thống kê tình trạng Covid</h1>
+        <div id="content-date"></div>
+        <div class="content-chart">
+            <div class="histogram-chart style_bar1">
+                <canvas id="myChart1_bar" ></canvas>
+            </div>
+            <div class="pie-chart style_pie1">
+                <canvas id="myChart1_pie"></canvas>
+            </div>
+        </div>
+        <input id="data" value="{{list}}" style="display:none"></input>
+       
+    </div>
+    <div class="content-home">
+        <h1>Thống kê thanh toán hôm nay</h1>
+        <div id="content-date"></div>
+        <div class="content-chart">
+            <div class="histogram-chart style_bar1">
+                <canvas id="myChart2_bar" ></canvas>
+            </div>
+            <div class="pie-chart style_pie1">
+                <canvas id="myChart2_pie"></canvas>
+            </div>
+        </div>
+        <input id="data1" value="{{listpay}}" style="display:none"></input>
+       
+    </div>
+     <div class="content-home">
+        <h1>Thống kê nợ hôm nay</h1>
+        <div id="content-date"></div>
+        <div class="content-chart">
+            <div class="histogram-chart style_bar1">
+                <canvas id="myChart3_bar" ></canvas>
+            </div>
+            <div class="pie-chart style_pie1">
+                <canvas id="myChart3_pie"></canvas>
+            </div>
+        </div>
+        <input id="data2" value="{{listdebt}}" style="display:none"></input>
+       
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>

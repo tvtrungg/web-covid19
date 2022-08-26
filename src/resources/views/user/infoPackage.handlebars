@@ -1,0 +1,137 @@
+<div class="home">
+    <div class="header-home">
+        <div class="text">Gói sản phẩm</div>
+
+        <div class="header-home-content">
+            <div class="home-search">
+                <input id="searchtext" type="search" placeholder="What are you looking for?">
+                <button id="search_btn"><i class='bx bx-search icon'></i></button>
+            </div>
+            <ul id="noti_nav">
+                <li>
+                    <div class="btn_info" style="line-height: 55px;margin-left: 6px;"><i class="bx bx-bell icon"></i>
+                    </div>
+                    <div class="subnav">
+                        {{#each user.notification}}
+                        <p>{{time}}</p>
+                        <p>{{content}}</p>
+
+                        {{/each}}
+                    </div>
+                </li>
+            </ul>
+
+            <div class="account">
+                <div class="account-img">
+                    <img src="/img/user.png" alt="manager">
+                </div>
+                <div class="account-text">
+                    <p class="account-name">{{user.surName}} {{user.name}}</p>
+                    <p style="font-size: 14px;float: left;opacity: 0.6;margin-right: 5px;">Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-home">
+        <div class="content-home_editpackages">
+            <div class="column-left">
+                <div class="column-left-img">
+                    <img src="/img/Package/{{package.image}}" alt="{{package.name}}" id="photo">
+                </div>
+
+                <div class="column-left-content">
+                    <div class="name-items">
+                        <!-- icon và tên -->
+                        <div class="items-sub1">
+                            <i class='bx bx-chevron-right icon'></i>
+                            <p class="column-left-name">Tên gói sản phẩm</p>
+                        </div>
+                        <!-- thẻ text -->
+                        <div class="items-sub2">
+                            <input type="text" value="{{package.name}}" disabled>
+                        </div>
+                    </div>
+
+                    <div class="limit-items-person">
+                        <!-- icon và tên -->
+                        <div class="items-sub1">
+                            <i class='bx bx-chevron-right icon'></i>
+                            <p class="column-left-name">Giới hạn mỗi người</p>
+                        </div>
+                        <!-- thẻ text -->
+                        <div class="items-sub2">
+                            <input type="text" value="{{package.limit}}" disabled>
+                        </div>
+                    </div>
+
+                    <div class="limit-items-time">
+                        <!-- icon và tên -->
+                        <div class="items-sub1">
+                            <i class='bx bx-chevron-right icon'></i>
+                            <p class="column-left-name">Giới hạn theo</p>
+                        </div>
+                        <!-- thẻ text -->
+                        <div class="items-sub2">
+                            <input type="text" value="{{package.time}}" disabled>
+                        </div>
+                    </div>
+
+                    <div class="price">
+                        <!-- icon và tên -->
+                        <div class="items-sub1">
+                            <i class='bx bx-chevron-right icon'></i>
+                            <p class="column-left-name">Giá bán</p>
+                        </div>
+                        <!-- thẻ text -->
+                        <div class="items-sub2">
+                            <input class="price priceTotal" type="text" value="{{package.price}}" disabled>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="column-right">
+                <div class="column-right-name">
+                    <p>Các sản phẩm thuộc gói</p>
+                </div>
+
+                <div class="column-right-content">
+                    <form class="table_1" action="/user/updatePackages" method="POST">
+                        <input name="idPackage" type="text" style="display:none" value="{{package._id}}">
+                        <div class="table_1-row">
+                            <div class="table_1-row_name">
+                                <p>Các sản phẩm trong gói</p>
+                            </div>
+                            <div class="table_1-row_sl">
+                                <p>Số lượng tối đa</p>
+                            </div>
+                        </div>
+                        <!-- sản phẩm 1 -->
+                        {{#each package.package}}
+                        <div class="table_1-row">
+                            <div class="table_1-row_name">
+                                <input type="checkbox" id="table1-tick-1" checked onclick="tichcheckbox(0)" disabled>
+                                <input placeholder="Name" name="tensp" type="text" value="{{_itemid.name}}" disabled>
+                            </div>
+
+                            <div class="table_1-row_sl">
+                                <input name="priceSP" class="priceSP" type="number" style="display:none"
+                                    value="{{_itemid.price}}">
+                                <input name="slSpham" class="slSpham" min="1" type="number" name="soluong"
+                                    max="{{amountMax}}" value="{{amount}}">
+                            </div>
+                        </div>
+                        {{/each}}
+                        <div class="update-info-right" style="display:flex;justify-content:center;align-items:center;">
+                            <button type="submit">Cập nhật danh sách</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

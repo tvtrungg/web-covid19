@@ -1,0 +1,269 @@
+[{
+  "_id": {
+    "$oid": "6307a9b479b7d1135eaa26e1"
+  },
+  "userName": "user1",
+  "name": "Dùng 1",
+  "surName": "Người",
+  "phone": "0123456787",
+  "gmail": "15@15156",
+  "cmnd": "156156156",
+  "birthday_day": 1,
+  "birthday_month": 1,
+  "birthday_year": 2022,
+  "sex": "male",
+  "passWord": "$2b$10$tFgnto6f.KG3AzCzyTpptOsRYsookqZryOjroeU.BtbO.OvzumGoC",
+  "confirmPassword": "$2b$10$8Abz7oMPI.5jwQUyMiIF4ePNAFpUDPd61WnG9UGhRd6gZ18/XKGoy",
+  "admin": false,
+  "manager": false,
+  "address": "12 abcd",
+  "image": "",
+  "AccountBalance": 5000,
+  "statusCovid": "F1",
+  "treatmentAddress": "Phường Bến Nghé, Quận 1, TP.Hồ Chí Minh",
+  "debt": "15000",
+  "isLogin": false,
+  "purchasedImages": [],
+  "purchasedTypes": [],
+  "purchasedNames": [],
+  "purchasedAmounts": [],
+  "purchasedStatus": [],
+  "purchased": [
+    {
+      "image": "botngot.png",
+      "type": "food",
+      "name": "Aji-ngon",
+      "amount": 1,
+      "time": "25-8-2022 23:55:1",
+      "status": "Ghi nợ 15000",
+      "check": false,
+      "_id": {
+        "$oid": "6307a9c479b7d1135eaa26f8"
+      }
+    }
+  ],
+  "payHistory": [
+    {
+      "time": "25-8-2022 23:55:1",
+      "active": "Thanh toán ghi nợ",
+      "statusOld": "10000",
+      "currentMoney": "-15000",
+      "_id": {
+        "$oid": "6307a9c479b7d1135eaa26f9"
+      }
+    },
+    {
+      "time": "25-8-2022 23:58:36",
+      "active": "Nạp tiền",
+      "statusOld": "-15000",
+      "currentMoney": "5000",
+      "_id": {
+        "$oid": "6307ae566a6702958edf6a5c"
+      }
+    }
+  ],
+  "notification": [],
+  "listPatient": [],
+  "listRelative": [],
+  "credit": 0.2,
+  "deleted": false,
+  "exchangeHistory": [],
+  "tokens": [],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1661446580129"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1661447938076"
+    }
+  },
+  "__v": 23
+},{
+  "_id": {
+    "$oid": "6307b1cd9693a4470189ff54"
+  },
+  "userName": "user2",
+  "name": "Dùng 2",
+  "surName": "Người ",
+  "phone": "012345555",
+  "gmail": "0231@153156",
+  "cmnd": "15615661",
+  "birthday_day": 1,
+  "birthday_month": 1,
+  "birthday_year": 2022,
+  "sex": "male",
+  "passWord": "$2b$10$2pUimTHIdYGKHBssmh3HIuZZw9xwSjrW6OeCu14onTyVT1ZVePgX.",
+  "confirmPassword": "$2b$10$Ucihf3sGyXkIhQljp0xRkeV/4dJvD0kBbvRtePx4Ie.hRs91IbzcW",
+  "admin": false,
+  "manager": false,
+  "address": "156156",
+  "image": "",
+  "AccountBalance": 10000,
+  "statusCovid": "F1",
+  "treatmentAddress": "Phường Bến Nghé, Quận 1, TP.Hồ Chí Minh",
+  "debt": "0",
+  "isLogin": false,
+  "purchasedImages": [],
+  "purchasedTypes": [],
+  "purchasedNames": [],
+  "purchasedAmounts": [],
+  "purchasedStatus": [],
+  "purchased": [],
+  "payHistory": [],
+  "notification": [],
+  "listPatient": [],
+  "listRelative": [
+    {
+      "$oid": "6307a9b479b7d1135eaa26e1"
+    }
+  ],
+  "credit": 0.2,
+  "deleted": false,
+  "exchangeHistory": [],
+  "tokens": [
+    {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzA3YjFjZDk2OTNhNDQ3MDE4OWZmNTQiLCJpYXQiOjE2NjE0NDg2NTMsImV4cCI6MTY2MTYyMTQ1M30.o8Hh4r9k4lIcX8UQDYlOfbtTEpiXyq9jjwyimlz6baI",
+      "_id": {
+        "$oid": "6307b1cd9693a4470189ff55"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1661448653270"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1661448653270"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6307b1f09693a4470189ff5f"
+  },
+  "userName": "user3",
+  "name": "Dùng 3",
+  "surName": "Người",
+  "phone": "021561561",
+  "gmail": "156156@156165",
+  "cmnd": "15615648888",
+  "birthday_day": 1,
+  "birthday_month": 1,
+  "birthday_year": 2022,
+  "sex": "male",
+  "passWord": "$2b$10$jObwrLIfBUJ6Z2yeNHU7rOObUO7qccqhJhEbsAJRSJ8o.1EIrqNRS",
+  "confirmPassword": "$2b$10$Jh5d.17CKOg5PYJ2qaKv4uubHgrnKGQnccXqoidPH54aC8rJb/AHW",
+  "admin": false,
+  "manager": false,
+  "address": "849498",
+  "image": "",
+  "AccountBalance": 10000,
+  "statusCovid": "F1",
+  "treatmentAddress": "Phường Bến Nghé, Quận 1, TP.Hồ Chí Minh",
+  "debt": "0",
+  "isLogin": false,
+  "purchasedImages": [],
+  "purchasedTypes": [],
+  "purchasedNames": [],
+  "purchasedAmounts": [],
+  "purchasedStatus": [],
+  "purchased": [],
+  "payHistory": [],
+  "notification": [],
+  "listPatient": [],
+  "listRelative": [
+    {
+      "$oid": "6307a9b479b7d1135eaa26e1"
+    },
+    {
+      "$oid": "6307b1cd9693a4470189ff54"
+    }
+  ],
+  "credit": 0.2,
+  "deleted": false,
+  "exchangeHistory": [],
+  "tokens": [
+    {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzA3YjFmMDk2OTNhNDQ3MDE4OWZmNWYiLCJpYXQiOjE2NjE0NDg2ODgsImV4cCI6MTY2MTYyMTQ4OH0.vMzRowNU2YrEuosjWdg6apZkHn76rA27Bry-QsT8mt4",
+      "_id": {
+        "$oid": "6307b1f09693a4470189ff60"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1661448688689"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1661448688689"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6307b20d9693a4470189ff6a"
+  },
+  "userName": "use4",
+  "name": "Dùng 4",
+  "surName": "Người ",
+  "phone": "15615864",
+  "gmail": "10561@561",
+  "cmnd": "156156188",
+  "birthday_day": 1,
+  "birthday_month": 1,
+  "birthday_year": 2022,
+  "sex": "male",
+  "passWord": "$2b$10$SUuzskFbWl4dOl5eFx0hzOrVu945vkvq2lE444AQ6IEPZ9MfKRKom",
+  "confirmPassword": "$2b$10$OHKbuKds2oGr3/NgMEIz7u8uDibFqHUQbg4QjQk1DZLw4N30hAA62",
+  "admin": false,
+  "manager": false,
+  "address": "18985",
+  "image": "",
+  "AccountBalance": 10000,
+  "statusCovid": "F1",
+  "treatmentAddress": "Phường Bến Nghé, Quận 1, TP.Hồ Chí Minh",
+  "debt": "0",
+  "isLogin": false,
+  "purchasedImages": [],
+  "purchasedTypes": [],
+  "purchasedNames": [],
+  "purchasedAmounts": [],
+  "purchasedStatus": [],
+  "purchased": [],
+  "payHistory": [],
+  "notification": [],
+  "listPatient": [],
+  "listRelative": [
+    {
+      "$oid": "6307b1f09693a4470189ff5f"
+    }
+  ],
+  "credit": 0.2,
+  "deleted": false,
+  "exchangeHistory": [],
+  "tokens": [
+    {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzA3YjIwZDk2OTNhNDQ3MDE4OWZmNmEiLCJpYXQiOjE2NjE0NDg3MTgsImV4cCI6MTY2MTYyMTUxOH0.Dp8L8O_VLQU8yaTFACFUoX8b_xbydCtc8u1N_NexTg4",
+      "_id": {
+        "$oid": "6307b20e9693a4470189ff6b"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1661448718005"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1661448718005"
+    }
+  },
+  "__v": 0
+}]

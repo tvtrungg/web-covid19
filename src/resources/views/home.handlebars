@@ -1,0 +1,59 @@
+<div id="main">
+    <!-- Site header -->
+
+    <div id="header__inner">
+        <div class="sign-in">
+            <div class="sign-in-forget_password">
+                <form class="sign-in-info" action="/user/login" method="POST">
+                    <input class="sign-in-text" name="userName" id="userName" type="text" placeholder="User name" maxlength="30" required>
+                    <input class="sign-in-text" name="passWord" id="passWord" type="password" placeholder="Password" maxlength="20" required>
+                    <button class="sign-in-button" type="submit" onclick="login()">Sign in</button>
+                </form>
+                <div class="sign-forget_text">
+                    <p><a href="#">Forgot Password?</a></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Site content -->
+    <div id="content">
+
+        <div class="content-characters">
+            <div class="content-center">
+                <div>COVID-19</div>
+                <div>management system</div>
+            </div>
+
+            <div class="content-solugant">
+                <p>Stay at home, save lives!</p>
+            </div>
+        </div>
+
+        <div class="content-button">
+            <div class="button1">
+                <a href="/user/pageLogin"><button class="custom-button button-1">Sign In</button></a>
+            </div>
+            <div class="button2">
+                <button class="custom-button button-16"><a href="https://covid19.hochiminhcity.gov.vn/">About
+                        COVID-19</a></button>
+            </div>
+        </div>
+    </div>
+
+    <video src="/video/videobghome.mp4" autoplay muted loop></video>
+
+</div>
+
+<script>
+    const login = document.querySelector(".login-link"),
+    if (login) {
+        login.addEventListener("click", () => {
+            content.classList.remove("active");
+            console.log("123");
+        });
+    }
+
+
+</script>

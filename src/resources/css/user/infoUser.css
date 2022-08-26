@@ -1,0 +1,355 @@
+.options-itemUsers {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 50%;
+
+}
+
+.options-itemUsers>li>a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.options-itemUsers>li>a>i {
+    margin-right: 4px;
+}
+
+.tm-gallery-links {
+    margin: 40px 0;
+}
+
+.layoutInfoUser {
+    margin-top: 0px;
+    margin-bottom: 60px;
+    background-color: #f7f7f7;
+}
+
+body.dark .layoutInfoUser {
+    background-color: #1e1e1e;
+}
+
+.tm-pagingUser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e5e5e5;
+    text-align: center;
+    height: 50px;
+    margin-top: 40px;
+}
+
+.tm-pagingUser a {
+    width: 40px;
+    text-decoration: none;
+    color: #000;
+    padding: 5px 15px;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+.tm-pagingUser a:hover {
+    color: #fff;
+    background-color: rgb(255, 155, 172);
+    border: none;
+    border-radius: 10px;
+}
+
+.tm-pagingUser a.active {
+    background-color: #ffa2a2;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+}
+
+
+.infoUser .infoUser-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    margin: 20px 35px;
+    background: var(--bg1);
+    box-shadow: var(--boxShadow);
+
+}
+
+.col-left {
+    grid-column: 1/2;
+    background-color: #fff;
+    padding: 25px;
+}
+
+.col-left img {
+    width: 100%;
+}
+
+.col-left p {
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+}
+
+
+.col-center {
+    grid-column: 2/4;
+    background-color: #fff;
+    padding: 25px 35px;
+}
+
+.col-right .right_status p,
+.col-right .right_treatment_address p,
+.col-center .center_name p,
+.col-center .center_cmnd p,
+.col-center .center_address p,
+.col-center .center_birthday p {
+    float: left;
+}
+
+.col-right .right_status input,
+.col-right .right_treatment_address input,
+.col-center .center_name input,
+.col-center .center_cmnd input,
+.col-center .center_address input,
+.col-center .center_birthday input {
+    width: 90%;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 23px;
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 0.3px;
+}
+
+
+.col-right {
+    grid-column: 4/6;
+    background-color: #fff;
+    padding: 25px;
+
+}
+
+.space {
+    margin-top: 15px;
+}
+
+.infoUser h2 {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.infoUser h3 {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+}
+
+.infoUser table {
+    border-collapse: collapse;
+}
+
+.infoUser th {
+    width: 170px;
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+}
+
+
+.infoUser tr {
+    border-bottom: 1px solid #ccc;
+}
+
+.infoUser tr:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.infoUser td {
+    text-align: center;
+    padding: 8px;
+}
+
+
+.notification-icon #noti_nav .subnav {
+    display: block;
+}
+
+.notification-icon #noti_nav .subnav .btn_info a:hover,
+/*Màu xám của sub-nav*/
+.notification-icon>#noti_nav>li:hover>a {
+    /*Màu xám của menu*/
+    color: #000;
+    background-color: #fc6237;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: none;
+}
+
+.notification-icon #noti_nav .subnav {
+    display: none;
+    position: absolute;
+    min-width: calc(var(--header_height) * 4);
+    font-size: calc(var(--header_height) / 3);
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.notification-icon #noti_nav .subnav a {
+    color: #333;
+    display: block;
+}
+
+.bx-bell {
+    padding-left: 6px;
+}
+
+#noti_nav {
+    width: 55px;
+    height: 55px;
+    font-size: 27px;
+    color: #030303;
+    background: #ffffff1a;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    outline: none;
+    margin-right: 1rem;
+    cursor: pointer;
+    align-self: center;
+    position: relative;
+}
+
+#noti_nav:hover {
+    background-color: rgb(231, 231, 231);
+}
+
+#noti_nav>li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+#header__inner .sign-in,
+#noti_nav>li>a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+#header__inner .sign-in,
+#noti_nav li a {
+    padding: 0 0.5rem;
+    text-decoration: none;
+    line-height: 58px;
+    display: block;
+}
+
+#noti_nav li:hover .subnav_1,
+#noti_nav li:hover .subnav {
+    display: block;
+}
+
+#noti_nav .subnav_1 a:hover,
+#noti_nav .subnav a:hover,
+/*Màu xám của sub-nav*/
+#noti_nav>li:hover>a {
+    /*Màu xám của menu*/
+    color: #000;
+    background-color: #ccc;
+}
+
+#noti_nav .subnav_1,
+#noti_nav .subnav {
+    display: none;
+    min-width: calc(var(--header_height) * 4);
+    font-size: calc(var(--header_height) / 3);
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5%;
+    z-index: 1;
+    transform: translate(-186px, 0px);
+}
+
+#noti_nav .subnav_1 a,
+#noti_nav .subnav a {
+    color: #333;
+    display: block;
+}
+
+table {
+    width: 100%;
+}
+
+table,
+td {
+    border-collapse: collapse;
+}
+
+thead {
+    display: table;
+    /* to take the same width as tr */
+    width: calc(100% - 17px);
+    /* - 17px because of the scrollbar width */
+}
+
+tbody {
+    display: block;
+    /* to enable vertical scrolling */
+    max-height: 120px;
+    /* e.g. */
+    overflow-y: auto;
+    /* keeps the scrollbar even if it doesn't need it; display purpose */
+}
+
+th,
+td {
+    /* to enable "word-break: break-all" */
+    padding: 5px;
+    word-break: break-all;
+    /* 4. */
+}
+
+.right_treatment_address th:first-child,
+.right_treatment_address td:first-child {
+    width: 10%;
+}
+
+.right_treatment_address th:nth-child(2),
+.right_treatment_address td:nth-child(2) {
+    width: 35%;
+}
+
+.right_treatment_address th:nth-child(3),
+.right_treatment_address td:nth-child(3) {
+    width: 30%;
+}
+
+.right_treatment_address th:last-child,
+.right_treatment_address td:last-child {
+    width: 30%;
+}
+
+.right_treatment_address tr {
+    display: table;
+    /* display purpose; th's border */
+    width: 103%;
+    box-sizing: border-box;
+    /* because of the border (Chrome needs this line, but not FF) */
+}
+
+.right_treatment_address table tbody::-webkit-scrollbar {
+    display: none;
+}
+
+td {
+    text-align: center;
+    border-bottom: none;
+    border-left: none;
+}

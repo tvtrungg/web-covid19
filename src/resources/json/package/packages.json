@@ -1,0 +1,59 @@
+[
+    {
+        "name": "Package 1",
+        "image": "nyp1.png",
+        "upto": "2",
+        "amount": "2",
+        "price": "25.000",
+        "link": "package_1.html"
+    },
+    {
+        "name": "Package 2",
+        "image": "nyp2.png",
+        "upto": "2",
+        "amount": "2",
+        "price": "35.000",
+        "link": "package_2.html"
+    },
+    {
+        "name": "Package 3",
+        "image": "nyp3.png",
+        "upto": "2",
+        "amount": "2",
+        "price": "50.000",
+        "link": "package_3.html"
+    },
+    {
+        "name": "Package 4",
+        "image": "nyp4.png",
+        "upto": "2",
+        "amount": "2",
+        "price": "85.000",
+        "link": "package_4.html"
+    },
+    {
+        "name": "Package 5",
+        "image": "nyp5.png",
+        "upto": "2",
+        "amount": "3",
+        "price": "75.000",
+        "link": "package_5.html"
+    },
+    {
+        "name": "Package 6",
+        "image": "nyp6.png",
+        "upto": "3",
+        "amount": "4",
+        "price": "50.000",
+        "link": "package_6.html"
+    },
+    {
+        "name": "Package 7",
+        "image": "nyp7.png",
+        "upto": "3",
+        "amount": "5",
+        "price": "50.000",
+        "link": "package_7.html"
+    }
+    
+]

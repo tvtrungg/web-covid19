@@ -1,0 +1,545 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --header_height: 60px;
+}
+
+body {
+  overflow: hidden;
+}
+
+#main{
+  width: 100vw;
+  height: 100vh;
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  z-index: -1;
+  object-fit: cover;
+}
+
+#header__inner {
+  width: 100%;
+  margin: 0 auto;
+  height: var(--header_height);
+
+}
+
+/*        ==============================  Header Options  =============================     */
+
+.logo img {
+  width: var(--header_height);
+  height: 100%;
+  margin: 0 15px;
+  padding: 3px;
+}
+
+#ul_nav {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+#ul_nav>li {
+  display: inline-block;
+}
+
+#header__inner .sign-in,
+#ul_nav>li>a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+#header__inner .sign-in,
+#ul_nav li a {
+  padding: 0 0.5rem;
+  text-decoration: none;
+  line-height: var(--header_height);
+  display: block;
+}
+
+#ul_nav li:hover .subnav_1,
+#ul_nav li:hover .subnav {
+  display: block;
+}
+
+#ul_nav .subnav_1 a:hover,
+#ul_nav .subnav a:hover,
+/*Màu xám của sub-nav*/
+#ul_nav>li:hover>a {
+  /*Màu xám của menu*/
+  color: #000;
+  background-color: #ccc;
+}
+
+
+#ul_nav .subnav_1,
+#ul_nav .subnav {
+  display: none;
+  position: absolute;
+  min-width: calc(var(--header_height) * 2.4);
+  font-size: calc(var(--header_height) / 3);
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+#ul_nav .subnav_1 a,
+#ul_nav .subnav a {
+  color: #333;
+  display: block;
+}
+
+/*        =============================== Header Sign In  =============================     */
+
+#header__inner .sign-in {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+#header__inner .sign-in .sign-in-text {
+  width: 150px;
+  height: 25px;
+  border-radius: 5px;
+  margin-right: 4px;
+  padding-left: 8px;
+  color:#000;
+}
+
+
+#header__inner .sign-in .sign-in-button {
+  margin-left: 5px;
+  height: 30px;
+  line-height: 6px;
+  background-color: #0d6efd;
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: 400;
+  border-width: 1px;
+  border-radius: 0.375rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    0 1px 1px rgba(0, 0, 0, 0.075);
+  padding: 0.75rem 0.75rem;
+  cursor: pointer;
+}
+
+#header__inner .sign-in .sign-in-button:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+#header__inner .sign-in .sign-in-button:focus {
+  background-color: #0a58ca;
+  border-color: #0a53be;
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+}
+
+
+
+.sign-in-forget_password {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-in-forget_password .sign-in-info {
+  width: 420px;
+  height: 45px;
+  margin-top: 5px;
+
+}
+
+.sign-in-forget_password .sign-forget_text {
+  width: 420px;
+  text-align: center;
+  margin-left: 12px;
+
+}
+
+.sign-in-forget_password .sign-forget_text p {
+  line-height: 18px;
+}
+
+.sign-in-forget_password a {
+  text-transform: none;
+  font-size: 13px;
+  text-decoration: none;
+  color: #c6c7d7;
+}
+
+.sign-in-forget_password a:hover {
+  text-decoration: underline;
+  color: #f9f1b4;
+}
+
+/*        ================================ Content =============================     */
+
+/*-----Content Characters-----*/
+
+#content {
+  width: 100%;
+  height: 500px;
+  margin-top: 70px;
+}
+
+#content .content-characters {
+  margin: 25px 0;
+}
+
+#content .content-center {
+  letter-spacing: 5px;
+  color: #fff;
+  transform: translateX(18%);
+}
+
+.content-center div {
+  font-family: initial;
+  font-style: italic;
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+#content .content-solugant {
+  font-size: 1.1rem;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  font-style: italic;
+  color: #fff;
+  opacity: 0.7;
+  transform: translateX(18%);
+
+}
+
+.content-solugant p {
+  margin-top: 15px;
+}
+
+/*-----Content Button-----*/
+
+#content .content-button {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  transform: translateX(18%);
+  font-family: 'Lato', sans-serif;
+}
+
+#content .content-button a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+#content .custom-button {
+  height: 40px;
+  color: #fff;
+  border-radius: 5px;
+  padding: 10px 25px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  display: inline-block;
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+    7px 7px 20px 0px rgba(0, 0, 0, .1),
+    4px 4px 5px 0px rgba(0, 0, 0, .1);
+  outline: none;
+}
+
+#content .button-1 {
+  width: 110px;
+  background: rgb(6, 14, 131);
+  background: linear-gradient(0deg, rgba(6, 14, 131, 1) 0%, rgba(12, 25, 180, 1) 100%);
+  border: none;
+}
+
+#content .button-1:hover {
+  background: rgb(0, 3, 255);
+  background: linear-gradient(0deg, rgba(0, 3, 255, 1) 0%, rgba(2, 126, 251, 1) 100%);
+}
+
+
+#content .button-16 {
+  width: 180px;
+  border: none;
+  color: #000;
+  background: rgb(252, 247, 247);
+  margin-left: 15px;
+}
+
+#content .button-16:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow:
+    -7px -7px 20px 0px rgba(114, 111, 111, 0.6),
+    -4px -4px 5px 0px rgba(189, 188, 188, 0.6),
+    7px 7px 20px 0px #fff,
+    4px 4px 5px 0px rgb(197, 196, 196);
+  transition: all 0.3s ease;
+}
+
+#content .button-16:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+#content .button-16:active {
+  top: 2px;
+}
+
+/*        ==============================  Footer  =============================     */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700");
+
+.footer-distributed {
+  background-color: rgba(102, 102, 102, 0.3);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: bold 16px sans-serif;
+  padding: 15px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left {
+  width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3 {
+  color: #ffffff;
+  font: normal 36px 'Open Sans', cursive;
+  margin: 0;
+}
+
+.footer-distributed h3 span {
+  color: lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 20px 0 12px;
+  padding: 0;
+}
+
+.footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  font-weight: 400;
+  text-decoration: none;
+  color: inherit;
+}
+
+.footer-distributed .footer-company-name {
+  color: #222;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center {
+  width: 35%;
+}
+
+.footer-distributed .footer-center i {
+  background-color: #33383b;
+  color: #ffffff;
+  font-size: 25px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 42px;
+  margin: 10px 15px;
+  vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope {
+  font-size: 17px;
+  line-height: 38px;
+}
+
+.footer-distributed .footer-center p {
+  display: inline-block;
+  color: #ffffff;
+  font-weight: 400;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.footer-distributed .footer-center p span {
+  display: block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 2;
+}
+
+.footer-distributed .footer-center p a {
+  color: lightseagreen;
+  text-decoration: none;
+  ;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "|";
+  font-weight: 300;
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right {
+  width: 20%;
+}
+
+.footer-distributed .footer-company-about {
+  line-height: 20px;
+  color: #92999f;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-distributed .footer-company-about span {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons {
+  margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+  .footer-distributed {
+    font: bold 14px sans-serif;
+  }
+
+  .footer-distributed .footer-left,
+  .footer-distributed .footer-center,
+  .footer-distributed .footer-right {
+    display: block;
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .footer-distributed .footer-center i {
+    margin-left: 0;
+  }
+
+}
+
+
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}

@@ -1,0 +1,41 @@
+<div class="home_recharge">
+    <div class="content-home">
+        <div class="tm-main">
+            <!-- Gallery section -->
+            <div class="tm-section-wrap">
+                <section id="gallery" class="tm-section">
+                    <div class="home-header-text">
+                        <a href="/user/{{user._id}}/dashboard">
+                            <i class='bx bx-arrow-back'></i>
+                        </a>
+                        <p>Nạp tiền</p>
+                    </div>
+                    <div class="forms_sign-in">
+                        <!-- Sign In -->
+                        <div class="form content-sign-in">
+                            <form class="form_sign-in" action="/user/rechargeMoney" method="POST">
+                                <div class="field form-sign-in">
+                                    <input name="MoneyCharge" id="MoneyCharge" placeholder="Số tiền nạp" autocomplete="off" required>
+                                </div>
+                                <div class="field form-sign-in">
+                                    {{!-- <span class="bx bx-euro"></span> --}}
+                                    <input name="IDCard" id="IDCard" placeholder="Mã thẻ" autocomplete="off" required>
+                                </div>
+
+                                <div class="field form-sign-in">
+                                    {{!-- <span class="bx bxs-lock-alt"></span> --}}
+                                    <input name="SeriCard" id="SeriCard" placeholder="Số Seri" autocomplete="off" required>
+                                </div>
+
+                                <button type="submit">Nạp tiền</button>
+                            </form>
+
+
+                        </div>
+
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>

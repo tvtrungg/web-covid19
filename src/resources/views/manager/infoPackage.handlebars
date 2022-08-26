@@ -1,0 +1,158 @@
+<div class="home">
+    <div class="header-home">
+        <div class="text">Gói sản phẩm</div>
+
+        <div class="header-home-content">
+            <form class="home-search" action="/manager/{{user._id}}/search" method="GET">
+                <input name="name" id="searchtext" onkeyup="myFunction()" type="search"
+                    placeholder="What are you looking for?" autocomplete="off">
+                <button type="submit" id="search_btn"><i class='bx bx-search icon'></i></button>
+            </form>
+
+            <div class="account">
+                <div class="account-img">
+                    <img src="/img/manager.png" alt="manager">
+                </div>
+                <div class="account-text">
+                    <p class="account-name">{{user.name}}</p>
+                    <p style="font-size: 14px;float: left;opacity: 0.6;margin-right: 5px;">Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-home">
+        <div class="content-home_editpackages">
+            <div class="column-left">
+                <div class="column-left-img">
+                    <img src="/img/Package/{{package.image}}" alt="{{package.name}}" id="photo">
+                </div>
+
+                <div class="column-left-content">
+                    <div class="name-items">
+                        <!-- icon và tên -->
+                        <div class="items-sub1">
+                            <i class='bx bx-chevron-right icon'></i>
+                            <p class="column-left-name">Tên gói sản phẩm</p>
+                        </div>
+                        <!-- thẻ text -->
+                        <div class="items-sub2">
+                            <input name="nameEdit" type="text" value="{{package.name}}">
+                        </div>
+                    </div>
+
+                    <div class="limit-items-person">
+                        <!-- icon và tên -->
+                        <div class="items-sub1">
+                            <i class='bx bx-chevron-right icon'></i>
+                            <p class="column-left-name">Giới hạn mỗi người</p>
+                        </div>
+                        <!-- thẻ text -->
+                        <div class="items-sub2">
+                            <input name="limitEdit" placeholder="Number" type="number" value="{{package.limit}}">
+                        </div>
+                    </div>
+
+                    <div class="limit-items-time">
+                        <!-- icon và tên -->
+                        <div class="items-sub1">
+                            <i class='bx bx-chevron-right icon'></i>
+                            <p class="column-left-name">Giới hạn theo</p>
+                        </div>
+                        <!-- thẻ text -->
+                        <div class="items-sub2">
+                            <select name="timeEdit" class="" value="{{package.time}}">
+                                <option value="day">Day</option>
+                                <option value="week">Week</option>
+                                <option value="month">Month</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="price">
+                        <!-- icon và tên -->
+                        <div class="items-sub1">
+                            <i class='bx bx-chevron-right icon'></i>
+                            <p class="column-left-name">Giá bán</p>
+                        </div>
+                        <!-- thẻ text -->
+                        <div class="items-sub2">
+                            <input name="priceEdit" class="price priceTotalPackage" type="number" value="{{package.price}}">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="column-right">
+                <div class="column-right-name">
+                    <p>Các sản phẩm thuộc gói</p>
+                </div>
+
+                <div class="column-right-content">
+                    <form class="table_1" action="/manager/updatePackages" method="POST">
+                        <input name="idPackage" type="text" style="display:none" value="{{package._id}}">
+                        <div class="table_1-row">
+                            <div class="table_1-row_name">
+                                <p>Các sản phẩm trong gói</p>
+                            </div>
+                            <div class="table_1-row_sl">
+                                <p>Số lượng tối đa</p>
+                            </div>
+                        </div>
+                        <!-- sản phẩm 1 -->
+                        {{#each package.package}}
+                        <div class="table_1-row">
+                            <div class="table_1-row_name">
+                                <input type="checkbox" id="table1-tick-1" checked onclick="tichcheckbox({{@index}})">
+                                <input placeholder="Name" name="tensp" type="text" value="{{_itemid.name}}">
+                            </div>
+
+                            <div class="table_1-row_sl">
+                                <input name="priceSP" class="priceSP" type="number" style="display:none"
+                                    value="{{_itemid.price}}">
+                                <input name="slSpham" class="slSpham" min="1" type="number" value="{{amountMax}}">
+                            </div>
+                        </div>
+                        {{/each}}
+                        <div class="update-info-right" style="display:flex;justify-content:center;align-items:center;">
+                            <button type="submit">Cập nhật danh sách</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+    function tichcheckbox(i) {
+        var arrSL = document.getElementsByName("slSpham");
+        var arrTSP = document.getElementsByName("tensp");
+        arrTSP[i].disabled = !arrTSP[i].disabled;
+        arrSL[i].disabled = !arrSL[i].disabled;
+
+        if (arrSL[i].disabled == true) {
+            arrSL.value = 0;
+        }
+
+        if (arrTSP[i].disabled == true) {
+            arrTSP.value = 0;
+        }
+    };
+
+    $('.slSpham').click(function () {
+        var temp = 0;
+        for (var i = 0; i < $('.slSpham').length; i++) {
+            console.log('Truoc',temp);
+            temp += (parseFloat($('.slSpham')[i].value) * parseFloat($('.priceSP')[i].value)) * 80 / 100
+        }
+
+        $('.priceTotalPackage').val(temp.toLocaleString());
+    });
+
+
+</script>

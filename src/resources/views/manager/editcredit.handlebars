@@ -1,0 +1,33 @@
+<div class="home">
+    <div class="header-home">
+        <div class="text">Gói sản phẩm</div>
+
+        <div class="header-home-content">
+            <div class="home-search">
+                <input id="searchtext" type="search" placeholder="What are you looking for?">
+                <button id="search_btn"><i class='bx bx-search icon'></i></button>
+            </div>
+
+            <div class="account">
+                <div class="account-img">
+                    <img src="/img/manager.png" alt="manager">
+                </div>
+                <div class="account-text">
+                    <p class="account-name">{{user.name}}</p>
+                    <p style="font-size: 14px;float: left;opacity: 0.6;margin-right: 5px;">Manager</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-home content-home-idCredit">
+        <div class="idCredit">
+            <h2>Thay đổi hạn mức</h2>
+            <form class="content_idCredit" action="/manager/Credit_Edit" method="POST">
+                <br>
+                <p>Hạn mức tối thiểu (%)</p> 
+                <input name="ID_Current_Manager" type="text"value="{{user._id}}" style="display:none">
+                <input name="newCredit" type="number" min="0" class="hanmuc" value="" placeholder="0.1" step=".01" required>
+                <button class="submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
