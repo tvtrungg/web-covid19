@@ -2,13 +2,17 @@ const User = require('../models/User')
 const mongoose = require("mongoose")
 
 class HomeController {
-  // [GET] /new
+  // [GET] /new - if don't have account admin, create new account admin
   async index(req, res) {
     res.render("home")
-    var admin;
-    admin = await User.create([
-      { _id: mongoose.Types.ObjectId(), userName: "admin", passWord: "admin", confirmPassword: "admin", name: 'Trung', surName: "Thiều Vĩnh", admin: true }
-    ]);
+    const user = await User.findOne({ isAdmin: true })
+    res.render("home")
+    if (!user) {
+      var admin;
+      admin = await User.create([
+        { _id: mongoose.Types.ObjectId(), userName: "admin", passWord: "admin", confirmPassword: "admin", name: 'Trung', surName: "Thiều Vĩnh", admin: true }
+      ]);
+    }
   }
 
 
